@@ -13,7 +13,16 @@
     "setup": "npm install && npm run validate",
     "validate": "npm-run-all lint test build"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mzabriskie/react-example"
+  },
   "author": "Oleh Nykoliak",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PumaDev310/tokeneditor_frontend.git"
+  },
+  "homepage": "https://github.com/PumaDev310/tokeneditor_frontend.git",
   "dependencies": {
     "axios": "0.13.1",
     "history": "^3.0.0",

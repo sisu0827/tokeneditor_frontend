@@ -1,10 +1,8 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
-export default class Auth extends Component {
-  constructor() {
-    super()
-    this.state = {filter: ''}
-  }
+
+class Auth extends Component {
 
   componentDidMount(){
     document.body.id="auth"
@@ -15,8 +13,6 @@ export default class Auth extends Component {
   }
 
   render() {
-    const {filter} = this.state
-    
     return (
       <div className="container text-center">
         <div className="row">
@@ -69,3 +65,5 @@ export default class Auth extends Component {
     );
   }
 }
+
+export default Auth;

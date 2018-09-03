@@ -1,6 +1,8 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
-export default class Dashboard extends Component {
+
+class Dashboard extends Component {
 
   constructor(props) {
     super(props)
@@ -10,7 +12,7 @@ export default class Dashboard extends Component {
   toggleSidenav() {
     var css = (this.state.showHideSidenav === "active") ? "" : "active";
     this.setState({"showHideSidenav":css});
-}
+  }
 
   render() {
 
@@ -253,3 +255,4 @@ export default class Dashboard extends Component {
     );
   }
 }
+export default Dashboard;

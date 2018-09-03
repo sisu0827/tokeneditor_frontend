@@ -34,7 +34,9 @@ class Auth extends Component {
               <div className="w-100"></div>
               <div className="col form-group">
                 <p><label><input type="checkbox" /> Remember me</label></p>
-                <button className="editor-btn big"><i className="fas fa-lg fa-sign-in-alt"></i> Log in</button>
+                <Link to={'/dashboard'}>
+                  <button className="editor-btn big"><i className="fas fa-lg fa-sign-in-alt"></i> Log in</button>
+                </Link>
               </div>
             </form>
           </div>

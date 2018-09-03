@@ -9,6 +9,10 @@ class Dashboard extends Component {
     this.state = {"showHideSidenav": ""}
   }
 
+  componentDidMount(){
+    document.body.id=""
+  }
+
   toggleSidenav() {
     var css = (this.state.showHideSidenav === "active") ? "" : "active";
     this.setState({"showHideSidenav":css});
@@ -91,7 +95,9 @@ class Dashboard extends Component {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="nav navbar-nav ml-auto">
                             <li className="nav-item">
-                                <a className="nav-link" href="/">Log out</a>
+                              <Link to={'/'} className="nav-link">
+                                Log out
+                              </Link>
                             </li>
                         </ul>
                     </div>

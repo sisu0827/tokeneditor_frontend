@@ -1,18 +1,16 @@
 {
-  "name": "client",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "react": "^16.4.1",
-    "react-dom": "^16.4.1",
-    "react-router-dom": "^4.3.1",
-    "react-scripts": "1.1.4"
-  },
+  "name": "react-express-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "Nicolas Burgess",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "start": "node index.js",
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
   },
-  "proxy": "http://localhost:5000"
+  "keywords": [],
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
 }

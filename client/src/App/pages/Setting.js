@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 
-class Setting extends Component {
+class Billing extends Component {
 
   constructor(props) {
     super(props)
@@ -10,7 +10,7 @@ class Setting extends Component {
   }
 
   componentDidMount(){
-    document.body.id="setting"
+    document.body.id="billing"
   }
 
   toggleSidenav() {
@@ -49,8 +49,8 @@ class Setting extends Component {
                 <li>
                     <a href="#"><i className="fas fa-lg fa-users"></i> Affiliate</a>
                 </li>
-                <li>
-                    <a href="/setting" className=""><i className="fas fa-lg fa-cog"></i> Settings</a>
+                <li className="selected-li">
+                    <a href="#"><i className="fas fa-lg fa-cog"></i> Settings</a>
                 </li>
             </ul>
             <div className="row my-5 px-2 align-items-center no-gutters">
@@ -104,132 +104,144 @@ class Setting extends Component {
                 </div>
             </nav>
 
-            <div className="container-fluid px-md-5">
+            <div className="container-fluid col-md-12">
 
               <div className="row justify-content-center">
                 <h2 className="text-uppercase">Settings</h2>
               </div>
 
-              <div className="row my-4">
-                <div className="col-md-4">
-                  <div className="row editor-block">
-                    <div className="col">
-                      <p className="m-0">Example campaign</p>
-                      <p className="text-muted">by Oleh</p>
-                    </div>
-                    <div className="col-auto">
-                      <p className="font-weight-bold m-0">60 ETH</p>
-                      <p className="text-muted">Funding goal</p>
-                    </div>
-                    <div className="w-100"></div>
-                    <div className="col">
-                      <button className="editor-btn main small"><i className="fas fa-eye"></i> View</button>
-                    </div>
-                    <div className="col-auto">
-                      <p className="font-weight-bold m-0">6 ETH</p>
-                      <p className="text-muted">Fund Raised</p>
-                    </div>
-                    <div className="w-100"></div>
-                    <div className="col">
-                      <p className="m-0 mb-1">Raised persent: 10%</p>
-                      <div className="progress">
-                        <span></span>
+              <div className="row my-4 text-center">
+                <div className="col col-md-12">
+                  <form className="row justify-content-center" onSubmit={this.handleSubmit}>
+                    <div className="settingeditor-block">
+                      <div className="">
+                        <div className="panel-header">User</div>
                       </div>
-                    </div>
-                    <div className="col-auto">
-                      <p className="font-weight-bold m-0">54</p>
-                      <p className="text-muted">Days to go</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-md-4">
-                  <div className="row editor-block">
-                    <div className="col">
-                      <p className="m-0">Example campaign</p>
-                      <p className="text-muted">by Oleh</p>
-                    </div>
-                    <div className="col-auto">
-                      <p className="font-weight-bold m-0">60 ETH</p>
-                      <p className="text-muted">Funding goal</p>
-                    </div>
-                    <div className="w-100"></div>
-                    <div className="col">
-                      <button className="editor-btn main small"><i className="fas fa-eye"></i> View</button>
-                    </div>
-                    <div className="col-auto">
-                      <p className="font-weight-bold m-0">6 ETH</p>
-                      <p className="text-muted">Fund Raised</p>
-                    </div>
-                    <div className="w-100"></div>
-                    <div className="col">
-                      <p className="m-0 mb-1">Raised persent: 10%</p>
-                      <div className="progress">
-                        <span></span>
+                      <div className="row container-fluid my-4">
+                        <div className="col-md-6">
+                          <div className="col-md-12 form-group">
+                            <p>Username</p>
+                            <input type="text" className="editor-input w-100" placeholder="olexh"/>
+                          </div>
+                          <div className="w-100"></div>
+                          <div className="col-md-12 form-group">
+                            <p>First name</p>
+                            <input type="text" className="editor-input w-100" placeholder="Oleh" />
+                          </div>
+                          <div className="w-100"></div>
+
+                          <div className="col-md-12 form-group">
+                            <p>website</p>
+                            <input type="text" className="editor-input w-100" placeholder="Your website" />
+                          </div>
+
+                        </div>
+                        <div className="col-md-6">
+                          <div className="col-md-12 form-group">
+                            <p>Email</p>
+                            <input type="text" className="editor-input w-100" placeholder="typicaladmsky@gmail.com"/>
+                          </div>
+                          <div className="w-100"></div>
+                          <div className="col-md-12 form-group">
+                            <p>Last name</p>
+                            <input type="text" className="editor-input w-100" placeholder="Nycoliak" />
+                          </div>
+                          <div className="w-100"></div>
+
+                          <div className="col-md-12 form-group">
+                            <p>Ethereum Wallet Address</p>
+                            <input type="text" className="editor-input w-100" placeholder="Your ether wallet" />
+                          </div>
+                          <div className="w-100"></div>
+                        </div>
                       </div>
+                      <div className="row container-fluid">
+                        <div className="col-md-12">
+                          <div className="col-md-12 form-group">
+                            <p>Bio</p>
+                            <textarea className="editor-input w-100" placeholder="Some biography"/>
+                          </div>
+                        </div>
+                      </div>                               
                     </div>
-                    <div className="col-auto">
-                      <p className="font-weight-bold m-0">54</p>
-                      <p className="text-muted">Days to go</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-md-4">
-                  <div className="row editor-block">
-                    <div className="col">
-                      <p className="m-0">Example campaign</p>
-                      <p className="text-muted">by Oleh</p>
-                    </div>
-                    <div className="col-auto">
-                      <p className="font-weight-bold m-0">60 ETH</p>
-                      <p className="text-muted">Funding goal</p>
-                    </div>
-                    <div className="w-100"></div>
-                    <div className="col">
-                      <button className="editor-btn main small"><i className="fas fa-eye"></i> View</button>
-                    </div>
-                    <div className="col-auto">
-                      <p className="font-weight-bold m-0">6 ETH</p>
-                      <p className="text-muted">Fund Raised</p>
-                    </div>
-                    <div className="w-100"></div>
-                    <div className="col">
-                      <p className="m-0 mb-1">Raised persent: 10%</p>
-                      <div className="progress">
-                        <span></span>
+                    <div className="settingeditor-block my-4">
+                      <div className="">
+                        <div className="panel-header" >Password</div>
                       </div>
+                      <div className="row container-fluid text-center my-4">
+                        <div className="col-md-12">
+                          <div className="col-md-12 form-group">
+                            <p>Old password</p>
+                            <input type="text" className="editor-input w-100 col-md-6" placeholder="********"/>
+                          </div>
+                        </div>
+                      </div>  
+                      <div className="row container-fluid">
+                        <div className="col-md-6">
+                          <div className="col-md-12 form-group">
+                            <p>New password</p>
+                            <input type="text" className="editor-input w-100" placeholder="********"/>
+                          </div>
+                          <div className="w-100"></div>
+                        </div>
+                        <div className="col-md-6">
+                          <div className="col-md-12 form-group">
+                            <p>Confirm new password</p>
+                            <input type="text" className="editor-input w-100" placeholder="********"/>
+                          </div>
+                          <div className="w-100"></div>
+                        </div>
+                      </div>
+                             
+                    
                     </div>
-                    <div className="col-auto">
-                      <p className="font-weight-bold m-0">54</p>
-                      <p className="text-muted">Days to go</p>
+
+                    <div className="settingeditor-block">
+                      <div className="">
+                        <div className="panel-header">Campaigns</div>
+                      </div>
+                        <div className="col-md-12 my-4">
+                          <div className="col-md-12 form-group">
+                            <p>Token sales affiliate program</p>
+                           </div>
+                          <div className="row col-md-12 form-group" align="center">
+                            <div className="col-md-6"></div>
+                            <div className="row" align="center">
+                              on <span className="span-space"/>
+                              <div className="col-sd-2">
+                                <div className="option-btn">
+                                  <span></span>
+                                </div>
+                              </div><span className="span-space"/>
+                              off
+                            </div>
+                            <div className="col-md-6"></div>
+                            
+                            
+                          </div> 
+                        </div>
                     </div>
-                  </div>
+                  </form>
                 </div>
+
+
               </div>
 
               <div className="row justify-content-center my-4">
-                <button className="editor-btn main big"><i className="fas fa-lg fa-search"></i> View other campaigns</button>
+                <button className="editor-btn main big"><i className="fas fa-sg fa-check"></i> Save</button>
               </div>
-
-              <div className="row justify-content-center">
-                <div className="col-md-4">
-                  <div className="row text-center align-items-center editor-block square" id="first">
-                    <div className="col">
-                      <p>Want to generate token?</p>
-                      <button className="editor-btn main big"><i className="fab fa-lg fa-ethereum"></i> Genetate token</button>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-md-4">
-                  <div className="row text-center align-items-center editor-block square" id="second">
-                    <div className="col">
-                      <p className="m-0">Already have a token?</p>
-                      <p className="m-0">Create a campaign</p>
-                      <button className="editor-btn main big"><i className="fas fa-lg fa-sign"></i> Create campaign</button>
-                    </div>
-                  </div>
-                </div>
+              <div className="row justify-content-center my-4">
               </div>
-
+              <div className="row justify-content-center my-4">
+              </div>
+              <div className="row justify-content-center my-4">
+              </div>
+              <div className="row justify-content-center my-4">
+              </div>  
+              <div className="row justify-content-center my-4">
+              </div>  
+              <div className="row justify-content-center my-4">
+              </div>                                                   
             </div>
         </div>
         <footer className="footer">
@@ -261,4 +273,4 @@ class Setting extends Component {
     );
   }
 }
-export default Setting;
+export default Billing;

@@ -18,7 +18,7 @@ class Register extends Component {
       <div className="container my-4">
         <div className="container">
           <Link to={'/'}>
-              Back    
+              <div className="back-btn"><i className="fas fa-sg fa-back"></i><span className="span-space"/> Back</div>    
           </Link>
         </div>
         <div className="row text-center my-10">
@@ -61,7 +61,7 @@ class Register extends Component {
               <div className="w-100"></div>                                                        
               <div className="col form-group">
                 <Link to={'/dashboard'}>
-                  <button className="editor-btn big"><i className="fas fa-lg fa-sign-in-alt"></i> Register</button>
+                  <button className="editor-btn big"><i className="fas fa-sg fa-check"></i> Register</button>
                 </Link>
               </div>
             </form>

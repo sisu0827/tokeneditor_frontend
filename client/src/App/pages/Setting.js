@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 
-class Dashboard extends Component {
+class Setting extends Component {
 
   constructor(props) {
     super(props)
@@ -10,7 +10,7 @@ class Dashboard extends Component {
   }
 
   componentDidMount(){
-    document.body.id=""
+    document.body.id="setting"
   }
 
   toggleSidenav() {
@@ -24,7 +24,7 @@ class Dashboard extends Component {
       <div className="wrapper">
         <nav id="sidebar" className={this.state.showHideSidenav}>
             <div className="sidebar-header">
-                <h5><img width="25%" height="25%" src="https://i.imgur.com/sMK1rIY.png" />Token Editor</h5>
+                <h5><img width="25%" height="25%" src="https://i.imgur.com/sMK1rIY.png" />Settings</h5>
             </div>
 
             <ul className="list-unstyled">
@@ -50,7 +50,7 @@ class Dashboard extends Component {
                     <a href="#"><i className="fas fa-lg fa-users"></i> Affiliate</a>
                 </li>
                 <li>
-                    <a href="/setting"><i className="fas fa-lg fa-cog"></i> Settings</a>
+                    <a href="/setting" className=""><i className="fas fa-lg fa-cog"></i> Settings</a>
                 </li>
             </ul>
             <div className="row my-5 px-2 align-items-center no-gutters">
@@ -107,7 +107,7 @@ class Dashboard extends Component {
             <div className="container-fluid px-md-5">
 
               <div className="row justify-content-center">
-                <h2 className="text-uppercase">Top campaigns</h2>
+                <h2 className="text-uppercase">Settings</h2>
               </div>
 
               <div className="row my-4">
@@ -261,4 +261,4 @@ class Dashboard extends Component {
     );
   }
 }
-export default Dashboard;
+export default Setting;

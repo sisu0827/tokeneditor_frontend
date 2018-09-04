@@ -48,7 +48,11 @@ class Auth extends Component {
               </div>
               <div className="w-100 my-2"></div>
               <div className="col">
-                <input type="button" className="editor-btn white big" value="Register" />
+                <Link to={'/register'}>
+                  <input type="button" className="editor-btn white big" value="Register" />
+                  
+                </Link>
+                
               </div>
               <div className="w-100 my-2"></div>
               <div className="col-md-4 form-group">

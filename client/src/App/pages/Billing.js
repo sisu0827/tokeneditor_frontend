@@ -112,7 +112,7 @@ class Billing extends Component {
 
               <div className="row my-4 text-center">
                 <div className="col col-md-12">
-                  <div className="editor-block">
+                  <div className="editor-block col-md-12">
                   <form className="row justify-content-center" onSubmit={this.handleSubmit}>
                     <div className="col-md-6">
                       <div className="col-md-12 form-group">
@@ -181,9 +181,20 @@ class Billing extends Component {
               </div>
 
               <div className="row justify-content-center my-4">
-                <button className="editor-btn main big"><i className="fas fa-lg fa-search"></i> Save</button>
+                <button className="editor-btn main big"><i className="fas fa-sg fa-check"></i> Save</button>
               </div>
-
+              <div className="row justify-content-center my-4">
+              </div>
+              <div className="row justify-content-center my-4">
+              </div>
+              <div className="row justify-content-center my-4">
+              </div>
+              <div className="row justify-content-center my-4">
+              </div>  
+              <div className="row justify-content-center my-4">
+              </div>  
+              <div className="row justify-content-center my-4">
+              </div> 
 
 
             </div>

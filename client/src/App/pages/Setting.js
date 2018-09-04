@@ -49,7 +49,7 @@ class Billing extends Component {
                 <li>
                     <a href="#"><i className="fas fa-lg fa-users"></i> Affiliate</a>
                 </li>
-                <li>
+                <li className="selected-li">
                     <a href="#"><i className="fas fa-lg fa-cog"></i> Settings</a>
                 </li>
             </ul>

@@ -386,3 +386,10 @@ a[data-toggle="collapse"] {
     overflow: hidden;
 
 }
+
+.selected-li {
+    color: white;
+    background-color: #454679;
+    text-decoration: none;
+    transition: all 0.3s;
+}

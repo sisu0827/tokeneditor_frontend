@@ -18,7 +18,7 @@ class Register extends Component {
       <div className="container my-4">
         <div className="container">
           <Link to={'/'}>
-              <i className="fas fa-sg fa-back"></i><span className="span-space"/> Back    
+              <div className="back-btn"><i className="fas fa-sg fa-back"></i><span className="span-space"/> Back</div>    
           </Link>
         </div>
         <div className="row text-center my-10">

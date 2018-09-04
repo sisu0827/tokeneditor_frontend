@@ -393,3 +393,18 @@ a[data-toggle="collapse"] {
     text-decoration: none;
     transition: all 0.3s;
 }
+
+.back-btn {
+    width: 150px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 50px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    background-color: #45467B;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    padding: 10px 20px;
+    margin: 0px 0;
+    transition: all 0.3s;
+}

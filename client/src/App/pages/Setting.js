@@ -1,13 +1,17 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import Switch from 'react-toggle-switch';
 
 
 class Billing extends Component {
 
   constructor(props) {
     super(props)
-    this.state = {"showHideSidenav": ""}
-  }
+    this.state = {
+      showHideSidenav: "",
+      switched: false
+    }
+  }   
 
   componentDidMount(){
     document.body.id="billing"
@@ -15,16 +19,25 @@ class Billing extends Component {
 
   toggleSidenav() {
     var css = (this.state.showHideSidenav === "active") ? "" : "active";
-    this.setState({"showHideSidenav":css});
+    this.setState({"showHideSidenav":css, switched: false});
   }
+
+  toggleSwitch = () => {
+    this.setState(prevState => {
+      return {
+        switched: !prevState.switched
+      };
+    });
+  };
 
   render() {
 
     return (
       <div className="wrapper">
+
         <nav id="sidebar" className={this.state.showHideSidenav}>
             <div className="sidebar-header">
-                <h5><img width="25%" height="25%" src="https://i.imgur.com/sMK1rIY.png" />Settings</h5>
+                <h5><img width="25%" height="25%" src="https://i.imgur.com/sMK1rIY.png" /><a href="/dashboard">Token Editor</a></h5>
             </div>
 
             <ul className="list-unstyled">
@@ -78,9 +91,8 @@ class Billing extends Component {
             </div>
             <p className="text-muted text-center my-5">@ 2018 Token Editor</p>
         </nav>
-
         <div id="content">
-
+          
             <nav className="navbar navbar-expand-lg">
                 <div className="container-fluid">
 
@@ -105,7 +117,7 @@ class Billing extends Component {
             </nav>
 
             <div className="container-fluid col-md-12">
-
+              
               <div className="row justify-content-center">
                 <h2 className="text-uppercase">Settings</h2>
               </div>
@@ -197,27 +209,30 @@ class Billing extends Component {
                     </div>
 
                     <div className="settingeditor-block">
+
                       <div className="">
                         <div className="panel-header">Campaigns</div>
                       </div>
                         <div className="col-md-12 my-4">
                           <div className="col-md-12 form-group">
                             <p>Token sales affiliate program</p>
-                           </div>
-                          <div className="row col-md-12 form-group" align="center">
+                          </div>
+                          <div className="row col-md-12 form-group">
                             <div className="col-md-6"></div>
-                            <div className="row" align="center">
+                            <div className="row">
                               on <span className="span-space"/>
-                              <div className="col-sd-2">
-                                <div className="option-btn">
-                                  <span></span>
-                                </div>
-                              </div><span className="span-space"/>
+                              
+                                <Switch onClick={this.toggleSwitch} on={this.state.switched}/>
+                                                           
+                              <span className="span-space"/>
                               off
+                            
+
                             </div>
-                            <div className="col-md-6"></div>
+                            <div className="col-md-6">
+                              
                             
-                            
+                            </div>
                           </div> 
                         </div>
                     </div>
@@ -226,6 +241,7 @@ class Billing extends Component {
 
 
               </div>
+
 
               <div className="row justify-content-center my-4">
                 <button className="editor-btn main big"><i className="fas fa-sg fa-check"></i> Save</button>

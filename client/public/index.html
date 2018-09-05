@@ -48,5 +48,21 @@
     <!-- Bootstrap JS -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
       <script src="/build/bundle.js"></script>
+
+    <script type="text/javascript">
+      $('#radioBtn a').on('click', function(){
+        alert("ok");
+          var sel = $(this).data('title');
+          var tog = $(this).data('toggle');
+          $('#'+tog).prop('value', sel);
+          
+          $('a[data-toggle="'+tog+'"]').not('[data-title="'+sel+'"]').removeClass('aleft-active').addClass('aleft-nonactive');
+          $('a[data-toggle="'+tog+'"][data-title="'+sel+'"]').removeClass('notActive').addClass('active');
+      })      
+
+      function changeClass(){
+        alert("ok");
+      }
+    </script>
   </body>
 </html>

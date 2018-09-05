@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-
-class Billing extends Component {
+class KycAml extends Component {
 
   constructor(props) {
     super(props)
@@ -10,7 +9,7 @@ class Billing extends Component {
   }
 
   componentDidMount(){
-    document.body.id="billing"
+    document.body.id=""
   }
 
   toggleSidenav() {
@@ -24,7 +23,7 @@ class Billing extends Component {
       <div className="wrapper">
         <nav id="sidebar" className={this.state.showHideSidenav}>
             <div className="sidebar-header">
-                <h5><img width="25%" height="25%" src="https://i.imgur.com/sMK1rIY.png" /><a href="/dashboard">Token Editor</a></h5>
+                <h5><img width="25%" height="25%" src="https://i.imgur.com/sMK1rIY.png" />Token Editor</h5>
             </div>
 
             <ul className="list-unstyled">
@@ -43,8 +42,8 @@ class Billing extends Component {
                 <li>
                     <a href="/Transactions"><i className="fas fa-lg fa-chart-bar"></i> Transactions</a>
                 </li>
-                <li className="selected-li">
-                    <a href="#"><i className="far fa-lg fa-money-bill-alt"></i> Billing</a>
+                <li>
+                    <a href="/billing"><i className="far fa-lg fa-money-bill-alt"></i> Billing</a>
                 </li>
                 <li>
                     <a href="/Affiliate"><i className="fas fa-lg fa-users"></i> Affiliate</a>
@@ -104,101 +103,104 @@ class Billing extends Component {
                 </div>
             </nav>
 
-            <div className="container-fluid col-md-12">
+            <div className="container-fluid px-md-5">
 
               <div className="row justify-content-center">
-                <h2 className="text-uppercase">Billing</h2>
+                <h2 className="text-uppercase">KYC/AML</h2>
               </div>
 
-              <div className="row my-4 text-center">
-                <div className="col col-md-12">
-                  <div className="editor-block col-md-12">
-                  <form className="row justify-content-center" onSubmit={this.handleSubmit}>
-                    <div className="col-md-6">
-                      <div className="col-md-12 form-group">
-                        <p>Company</p>
-                        <input type="text" className="editor-input w-100" placeholder="olexh"/>
+              <div className="row my-4">
+                <div className="col-md-12">
+                  <div className="row editor-block">
+                      <div className="col-md-12">
+                        <div className="row text-center align-items-center square">
+                          <div className="col">
+                            <p>Choose your campagin</p>
+                            
+                            <div className="dropdown toggle col-md-6">
+                              <input id="t1" type="checkbox"></input>
+                              <label>Example campagin</label>
+                              <ul>
+                                <li><a href="#">campagin 1</a></li>
+                                <li><a href="#">campagin 2</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
                       </div>
-                      <div className="w-100"></div>
-                      <div className="col-md-12 form-group">
-                        <p>First name</p>
-                        <input type="text" className="editor-input w-100" placeholder="Smith" />
-                      </div>
-                      <div className="w-100"></div>
-
-                      <div className="col-md-12 form-group">
-                        <p>Country</p>
-                        <input type="text" className="editor-input w-100" placeholder="Your website" />
-                      </div>
-                      <div className="w-100"></div>
-                      <div className="col-md-12 form-group">
-                        <p>State</p>
-                        <input type="text" className="editor-input w-100" placeholder="state" />
-                      </div>
-                      <div className="w-100"></div>
-                      <div className="col-md-12 form-group">
-                        <p>Telephone</p>
-                        <input type="text" className="editor-input w-100" placeholder="telephone" />
-                      </div>
-                      <div className="w-100"></div>
- 
-                    </div>
-                    <div className="col-md-6">
-                      <div className="col-md-12 form-group">
-                        <p>Address</p>
-                        <input type="text" className="editor-input w-100" placeholder="typicaladmsky@gmail.com"/>
-                      </div>
-                      <div className="w-100"></div>
-                      <div className="col-md-12 form-group">
-                        <p>Last name</p>
-                        <input type="text" className="editor-input w-100" placeholder="Nycoliak" />
-                      </div>
-                      <div className="w-100"></div>
-
-                      <div className="col-md-12 form-group">
-                        <p>City</p>
-                        <input type="text" className="editor-input w-100" placeholder="Your ether wallet" />
-                      </div>
-                      <div className="w-100"></div>
-                      <div className="col-md-12 form-group">
-                        <p>City</p>
-                        <input type="text" className="editor-input w-100" placeholder="Your ether wallet" />
-                      </div>
-                      <div className="w-100"></div>
-                      <div className="col-md-12 form-group">
-                        <p>Email</p>
-                        <input type="text" className="editor-input w-100" placeholder="Your ether wallet" />
-                      </div>
-                      <div className="w-100"></div>
- 
-                    </div>
-                                                   
-                  </form>
                   </div>
-                </div>
-
-
+                </div> 
               </div>
+              <div className="table-responsive row editor-block" style={{borderCollapse:"collapse"}}>
+                <table className="table" style={{borderCollapse:"collapse"}}>
+                  <thead style={{fontSize:"15px", textAlign:"center"}}>
+                    <tr>
+                      <th>Name</th>
+                      <th>Email</th>
+                      <th>Country</th>
+                      <th>Wallet address</th>
+                      <th>Verified</th>
+                      
+                    </tr>
+                  </thead>
+                  <tbody style={{fontSize:"13px", textAlign:"center"}}>
+                    <tr className="active">
+                      <td>Stive</td>
+                      <td>stive22@gmail.com</td>
+                      <td>United States</td>
+                      <td>0xad4777029ae71f2b2kall</td>
+                      <td>No</td>
+                      <button className="editor-btn main small">
+                        <i className="fas fa-edit"></i> Manage
+                      </button>
+                    </tr>
+                    <tr>
+                      <td>Stive</td>
+                      <td>stive22@gmail.com</td>
+                      <td>United States</td>
+                      <td>0xad4777029ae71f2b2kall</td>
+                      <td>No</td>
+                      <button className="editor-btn main small">
+                        <i className="fas fa-edit"></i> Manage
+                      </button>
+                    </tr>
+                    <tr>
+                      <td>Stive</td>
+                      <td>stive22@gmail.com</td>
+                      <td>United States</td>
+                      <td>0xad4777029ae71f2b2kall</td>
+                      <td>No</td> 
+                      <button className="editor-btn main small">
+                        <i className="fas fa-edit"></i> Manage
+                      </button>                     
+                    </tr>
+                    <tr>
+                      <td>Stive</td>
+                      <td>stive22@gmail.com</td>
+                      <td>United States</td>
+                      <td>0xad4777029ae71f2b2kall</td>
+                      <td>No</td>
+                      <button className="editor-btn main small">
+                        <i className="fas fa-edit"></i> Manage
+                      </button>
+                    </tr>
+                    <tr>
+                      <td>Stive</td>
+                      <td>stive22@gmail.com</td>
+                      <td>United States</td>
+                      <td>0xad4777029ae71f2b2kall</td>
+                      <td>No</td>
+                      <button className="editor-btn main small">
+                        <i className="fas fa-edit"></i> Manage
+                      </button>
+                    </tr>
 
-              <div className="row justify-content-center my-4">
-                <button className="editor-btn main big"><i className="fas fa-sg fa-check"></i> Save</button>
+                  </tbody>
+                </table>
               </div>
-              <div className="row justify-content-center my-4">
-              </div>
-              <div className="row justify-content-center my-4">
-              </div>
-              <div className="row justify-content-center my-4">
-              </div>
-              <div className="row justify-content-center my-4">
-              </div>  
-              <div className="row justify-content-center my-4">
-              </div>  
-              <div className="row justify-content-center my-4">
-              </div> 
-
-
             </div>
         </div>
+
         <footer className="footer">
           <div className="container-fluid">
             <div className="row justify-content-center">
@@ -228,4 +230,4 @@ class Billing extends Component {
     );
   }
 }
-export default Billing;
+export default KycAml;

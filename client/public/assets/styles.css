@@ -269,13 +269,13 @@ a[data-toggle="collapse"] {
     position: relative;
 }
 
-.dropdown-toggle::after {
+/*.dropdown-toggle::after {
     display: block;
     position: absolute;
     top: 50%;
     right: 20px;
     transform: translateY(-50%);
-}
+}*/
 
 #content {
     width: 100%;
@@ -305,7 +305,76 @@ a[data-toggle="collapse"] {
     }
 }
 
-.panelbg {
+
+.panel-danger {
+    border-color: #ff3b30;
+}
+
+.panel-danger {
+    border-color: #ebccd1;
+}
+
+.panel {
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 20px;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+
+    border: 1px dashed #454679;
+    border-radius: 20px;
+
+}
+
+.panel-danger>.panel-heading {
+    color: rgb(69, 70, 123);
+    background-color: rgb(69, 70, 123);
+    border-color: #ff3b30;
+}
+
+.panel-danger>.panel-heading {
+    color: white;
+    background-color: rgb(69, 70, 123);
+    border-color: #ebccd1;
+    text-align: center;
+
+    border: 1px dashed #454679;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.panel-heading {
+    padding: 10px 15px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    text-align: center;
+}
+
+.panel-body {
+    padding: 15px;
+}
+
+.editor-statstics {
+    border: 1px dashed #454679;
+    border-radius: 20px;
+    background-color: white;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+
+.Title {
+    font-size: 16px;
+}
+
+.Amount {
+    font-size: 19px;
+    font-weight: bold;
+}
+
+
+.bpanelg {
     background-color: lightblue;
     width: 200px;
     padding: 25px;
@@ -495,4 +564,128 @@ a[data-toggle="collapse"] {
     }
 .switch.disabled {
     cursor:not-allowed
+}
+
+.editor-btn.copy {
+    background-color: white;
+    color: #45467B;
+    border-color: #45467B;
+    width: 100px;
+}
+
+.editor-btn.link {
+    background-color: #45467B;
+    color: white;
+    border-color: #45467B;
+}
+
+.editor-btn.copy:hover {
+    background-color: #45467B;
+    color: white;
+}
+
+.dropdown {
+  width: 100%;
+  display: inline-block;
+  margin-right: 10px;
+  position: relative;
+  /*border-radius: 10px;*/
+  border-color: red;
+  /*background-color: rgb(69, 70, 123);*/
+  background-color: white;
+
+}
+.dropdown.toggle > input {
+  display: none;
+}
+
+.dropdown > a, .dropdown.toggle > label {
+  /*border-radius: 2px;*/
+  /*box-shadow: 0 6px 5px -5px rgba(0,0,0,0.3);*/
+}
+
+.dropdown > a::after, .dropdown.toggle > label::after {
+  content: "";
+  float: right;
+  margin: 15px 15px 0 0;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+
+  border-top:rgb(69, 70, 123);
+  border-width: 12px;
+  border-top: solid #CCC;
+  border-radius: 6px;
+  border-top-width: 20px;
+
+}
+.dropdown ul {
+  list-style-type: none;
+  display: block;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 93%;
+  /*box-shadow: 0 6px 5px -5px rgba(0,0,0,0.3);*/
+  overflow: hidden;
+}
+.dropdown a, .dropdown.toggle > label {
+  display: block;
+  padding: 0 0 0 10px;
+  text-decoration: none;
+  line-height: 40px;
+  font-size: 15px;
+  /*text-transform: uppercase;*/
+  /*font-weight: bold;*/
+  color: grey;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(69, 70, 123);
+  background-color: white;
+}
+.dropdown li {
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  transition: all 500ms;
+}
+.dropdown.hover li {
+  transition-delay: 300ms;
+  background-color: rgb(69, 70, 123);
+}
+.dropdown li:first-child a {
+  /*border-radius: 2px 2px 0 0;*/
+}
+.dropdown li:last-child a {
+  /*border-radius: 0 0 2px 2px;*/
+}
+
+/*
+https://freefrontend.com/css-menu/#dropdown-menu
+*/
+.dropdown a:hover, .dropdown.toggle > label:hover{
+  background-color: white;
+  color: rgb(69, 70, 123);
+  border-radius: 10px;
+  border-style: solid;
+  border-color: black;
+}
+.dropdown > a:hover::after, .dropdown.toggle > label:hover::after, .dropdown.toggle > input:checked ~ label::after {
+  border-top-color: rgb(69, 70, 123);
+  border-width: 12px;
+  border-top-width: 20px;
+  border-radius: 6px;
+}
+.dropdown li:first-child a:hover::before {
+  border-bottom-color: #EEE;
+}
+.dropdown.hover:hover li, .dropdown.toggle > input:checked ~ ul li {          
+  height: 40px;
+  width: 100%;
+}
+
+.dropdown.hover:hover li:first-child, .dropdown.toggle > input:checked ~ ul li:first-child {
+  /*padding-top: 2px;*/
 }

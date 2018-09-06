@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-
+import { CountryDropdown, RegionDropdown } from 'react-country-region-selector';
 
 class Billing extends Component {
 
   constructor(props) {
     super(props)
-    this.state = {"showHideSidenav": ""}
+    this.state = {
+      showHideSidenav: "",
+      country: '', 
+      region: ''
+
+    }
   }
 
   componentDidMount(){
@@ -17,9 +22,15 @@ class Billing extends Component {
     var css = (this.state.showHideSidenav === "active") ? "" : "active";
     this.setState({"showHideSidenav":css});
   }
+  selectCountry (val) {
+    this.setState({ country: val });
+  }
 
+  selectRegion (val) {
+    this.setState({ region: val });
+  }
   render() {
-
+    const { country, region } = this.state;
     return (
       <div className="wrapper">
         <nav id="sidebar" className={this.state.showHideSidenav}>
@@ -35,7 +46,7 @@ class Billing extends Component {
                     <a href="#"><i className="fas fa-lg fa-coins"></i> Tokens</a>
                 </li>
                 <li>
-                    <a href="#"><i className="fas fa-lg fa-sign"></i> Campaigns</a>
+                    <a href="/compaign"><i className="fas fa-lg fa-sign"></i> Campaigns</a>
                 </li>
                 <li>
                     <a href="#"><i className="fas fa-lg fa-id-card"></i> KYC/AML</a>
@@ -128,7 +139,12 @@ class Billing extends Component {
 
                       <div className="col-md-12 form-group">
                         <p>Country</p>
-                        <input type="text" className="editor-input w-100" placeholder="Your website" />
+                        <div>
+                          <CountryDropdown
+                            value={country}
+                            onChange={(val) => this.selectCountry(val)} classes="col-md-12 Dropdown-control" />
+                          
+                        </div>
                       </div>
                       <div className="w-100"></div>
                       <div className="col-md-12 form-group">
@@ -157,7 +173,13 @@ class Billing extends Component {
 
                       <div className="col-md-12 form-group">
                         <p>City</p>
-                        <input type="text" className="editor-input w-100" placeholder="Your ether wallet" />
+                        <div>
+                          <RegionDropdown
+                            country={country}
+                            value={region}
+                            onChange={(val) => this.selectRegion(val)} classes="col-md-12 Dropdown-control " />
+                        </div>
+
                       </div>
                       <div className="w-100"></div>
                       <div className="col-md-12 form-group">

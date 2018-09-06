@@ -230,11 +230,25 @@ a:focus {
     transition: all 0.3s;
 }
 
+#sidebar-no {
+    max-width: 80px;
+    background: white;
+    color: black;
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.10);
+    transition: all 0.3s;   
+}
+
 #sidebar.active {
     margin-left: -250px;
 }
+#sidebar-no.active {
+    margin-left: -80px;
+}
 
 #sidebar .sidebar-header {
+    padding: 20px;
+}
+#sidebar-no .sidebar-header {
     padding: 20px;
 }
 
@@ -242,8 +256,16 @@ a:focus {
     padding: 20px 0;
     border-bottom: 1px solid #47748b;
 }
+#sidebar-no ul.components {
+    padding: 20px 0;
+    border-bottom: 1px solid #47748b;
+}
 
 #sidebar ul p {
+    color: #fff;
+    padding: 10px;
+}
+#sidebar-no ul p {
     color: #fff;
     padding: 10px;
 }
@@ -253,13 +275,27 @@ a:focus {
     font-size: 18px;
     display: block;
 }
+#sidebar-no ul li a {
+    padding: 15px 25px;
+    font-size: 18px;
+    display: block;
+}
 
 #sidebar ul li a:hover {
     color: white;
     background: #45467B;
 }
+#sidebar-no ul li a:hover {
+    color: white;
+    background: #45467B;
+}
 
 #sidebar ul li.active>a,
+a[aria-expanded="true"] {
+    color: #fff;
+    background: #6d7fcc;
+}
+#sidebar-no ul li.active>a,
 a[aria-expanded="true"] {
     color: #fff;
     background: #6d7fcc;
@@ -294,8 +330,16 @@ a[data-toggle="collapse"] {
     #sidebar {
         margin-left: -250px;
     }
+
+    #sidebar-no {
+        margin-left: -80px;
+    }
+
     #sidebar.active {
         margin-left: 0;
+    }
+    #sidebar-no.active {
+        margin-left: 0px;
     }
     #sidebarCollapse span {
         display: none;
@@ -363,6 +407,14 @@ a[data-toggle="collapse"] {
     margin: 5px 0;
 }
 
+.editor-button {
+    border: 1px dashed #454679;
+    border-radius: 20px;
+    background-color: white;
+    padding: 10px;
+    margin: 15px 10%;
+    width: 80%;
+}
 
 .Title {
     font-size: 16px;
@@ -627,7 +679,7 @@ a[data-toggle="collapse"] {
   padding: 0;
   position: absolute;
   width: 93%;
-  /*box-shadow: 0 6px 5px -5px rgba(0,0,0,0.3);*/
+  box-shadow: 0 6px 5px -5px rgba(0,0,0,0.3);
   overflow: hidden;
 }
 .dropdown a, .dropdown.toggle > label {
@@ -641,15 +693,17 @@ a[data-toggle="collapse"] {
   color: grey;
   border-radius: 10px;
   border-style: solid;
-  border-width: 1px;
+  border-width: 2px;
   border-color: rgb(69, 70, 123);
   background-color: white;
+  border-bottom-width: 2px;
 }
 .dropdown li {
   width: 100%;
   height: 0;
   overflow: hidden;
   transition: all 500ms;
+  margin-top: 3px;
 }
 .dropdown.hover li {
   transition-delay: 300ms;
@@ -682,10 +736,57 @@ https://freefrontend.com/css-menu/#dropdown-menu
   border-bottom-color: #EEE;
 }
 .dropdown.hover:hover li, .dropdown.toggle > input:checked ~ ul li {          
-  height: 40px;
+  height: 44px;
   width: 100%;
 }
 
 .dropdown.hover:hover li:first-child, .dropdown.toggle > input:checked ~ ul li:first-child {
   /*padding-top: 2px;*/
+}
+
+.modal-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(33, 33, 33, 0.85);
+  z-index: 1000;
+}
+
+.modal-dialog {
+  position: fixed;
+  top: 20%;
+  left: 10%;
+  right: 10%;
+  bottom: 20%;
+  text-align: center;
+  background-color: rgba(250, 250, 250, 1);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  z-index: 1001;
+}
+
+.modal-dialog > header {
+  background: rgb(69, 70, 123);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 2rem;
+  padding: 0 2rem;
+  min-height: 50px;
+}
+
+.modal-dialog > header > button {
+  border: none;
+  padding: 0;
+  font-size: 1.2rem;
+  background: inherit;
+  color: white;
+  cursor: pointer;
+}
+
+hr {
+  border-style: dashed;
+  border-color: rgb(69, 70, 120);
 }

@@ -95,46 +95,61 @@ class Tokens extends Component {
 
     return (
       <div className="wrapper">
-        <nav id="sidebar-no" className={this.state.showHideSidenav}>
-            <div>
-                <h5><img width="80px" height="100px" src="https://i.imgur.com/sMK1rIY.png" /></h5>
+        <nav id="sidebar" className={this.state.showHideSidenav}>
+            <div className="sidebar-header">
+                <h5><img width="25%" height="25%" src="https://i.imgur.com/sMK1rIY.png" />Token Editor</h5>
             </div>
 
             <ul className="list-unstyled">
                 <li>
-                    <a href="#"><i className="fab fa-lg fa-ethereum mx-2"></i></a>
+                    <a href="#"><i className="fab fa-lg fa-ethereum"></i> Generate</a>
                 </li>
                 <li className="selected-li">
-                    <a href="/Tokens"><i className="fas fa-lg fa-coins"></i></a>
+                    <a href="/Tokens"><i className="fas fa-lg fa-coins"></i> Tokens</a>
                 </li>
                 <li>
-                    <a href="#"><i className="fas fa-lg fa-sign"></i></a>
+                    <a href="#"><i className="fas fa-lg fa-sign"></i> Campaigns</a>
                 </li>
                 <li>
-                    <a href="/KycAml"><i className="fas fa-lg fa-id-card"></i></a>
+                    <a href="/KycAml"><i className="fas fa-lg fa-id-card"></i> KYC/AML</a>
                 </li>
                 <li>
-                    <a href="#"><i className="fas fa-lg fa-chart-bar"></i></a>
+                    <a href="/Transactions"><i className="fas fa-lg fa-chart-bar"></i> Transactions</a>
                 </li>
                 <li>
-                    <a href="billing"><i className="far fa-lg fa-money-bill-alt"></i></a>
+                    <a href="/billing"><i className="far fa-lg fa-money-bill-alt"></i> Billing</a>
                 </li>
                 <li>
-                    <a href="/Affiliate"><i className="fas fa-lg fa-users"></i></a>
+                    <a href="/Affiliate"><i className="fas fa-lg fa-users"></i> Affiliate</a>
                 </li>
                 <li>
-                    <a href="/setting"><i className="fas fa-lg fa-cog"></i></a>
+                    <a href="/setting"><i className="fas fa-lg fa-cog"></i> Settings</a>
                 </li>
             </ul>
             <div className="row my-5 px-2 align-items-center no-gutters">
               <div className="col">
-                <i className="fas fa-2x fa-user mx-3"></i>
+                <i className="fas fa-2x fa-user"></i>
               </div>
               <div className="col">
-                <p className="m-0"></p>
-                <span className="profile-email"></span>
+                <p className="m-0">Oleh</p>
+                <span className="profile-email">typicaladmsky@gmail.com</span>
               </div>
             </div>
+            <div className="row justify-content-center main-color my-5">
+              <div className="col-auto">
+                <a href="http://twitter.com/" target="_blank"><i className="fab fa-lg fa-twitter"></i></a>
+              </div>
+              <div className="col-auto">
+                <a href="http://www.facebook.com/" target="_blank"><i className="fab fa-lg fa-facebook-f"></i></a>
+              </div>
+              <div className="col-auto">
+                <a href="https://medium.com/" target="_blank"><i className="fab fa-lg fa-medium-m"></i></a>
+              </div>
+              <div className="col-auto">
+                <a href="https://www.youtube.com/" target="_blank"><i className="fab fa-lg fa-youtube"></i></a>
+              </div>
+            </div>
+            <p className="text-muted text-center my-5">@ 2018 Token Editor</p>
         </nav>
 
         <div id="content">

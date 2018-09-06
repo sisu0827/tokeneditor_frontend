@@ -9,6 +9,8 @@ import Billing from './pages/Billing';
 import Transactions from './pages/Transactions';
 import Affiliate from './pages/Affiliate';
 import KycAml from './pages/KycAml';
+import Tokens from './pages/Tokens';
+
 class App extends Component {
   render() {
     const App = () => (
@@ -22,6 +24,7 @@ class App extends Component {
           <Route path='/register' component={Register}/>
           <Route path='/setting' component={Setting}/>
           <Route path='/billing' component={Billing}/>
+          <Route path='/Tokens' component={Tokens}/>
         </Switch>
       </div>
     )

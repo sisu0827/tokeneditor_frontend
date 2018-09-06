@@ -32,7 +32,7 @@ class Billing extends Component {
                     <a href="#"><i className="fab fa-lg fa-ethereum"></i> Generate</a>
                 </li>
                 <li>
-                    <a href="#"><i className="fas fa-lg fa-coins"></i> Tokens</a>
+                    <a href="/Tokens"><i className="fas fa-lg fa-coins"></i> Tokens</a>
                 </li>
                 <li>
                     <a href="#"><i className="fas fa-lg fa-sign"></i> Campaigns</a>

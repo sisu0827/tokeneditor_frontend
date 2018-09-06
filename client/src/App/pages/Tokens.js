@@ -228,19 +228,19 @@ class Tokens extends Component {
                 <div id="stats" style={{backgroundColor: "rgb(69, 70, 123)", color:"white", height:"50px", width:"100%"}}>
                   <div className="col-md-12">
                     <div className="row">
-                      <div className="col-md-10">
+                      <div className="col-md-11">
                         <div className="col-md-8">
                           <p className="Title" style={{textAlign:"right"}}>Manage ExampleToken</p>
                         </div>
                       </div>
-                      <div className="col-md-2">
+                      <div className="col-md-1">
                         <div className="col-md-12">
                           <button style = {buttonStyle} 
                             onClick={this.closeModal}
                             type="button" 
                             aria-label="close"
                           >
-                            <p style={{textAlign:"center"}}>CLOSE</p>
+                            <p style={{marginLeft:"-20px"}}>CLOSE</p>
                           </button>                      
                         </div>
                       </div>
@@ -478,7 +478,7 @@ class Tokens extends Component {
                               <button className="editor-btn main big" style={{width:"100%"}}><img src={window.location.origin + '/assets/images/icon_checklist.png'} /> Whitelist user</button> 
                             </div>
                             <div className="col-md-6" style={{textAlign:"center"}}>
-                              <button className="editor-btn main big" style={{width:"100%"}}><img src={window.location.origin + '/assets/images/icon_info_white.png'} /> Is user whitelisted</button> 
+                              <button className="editor-btn main big" style={{width:"100%"}}><h style={{fontWeight:"bold", fontSize:"25px"}}>?</h> Is user whitelisted</button> 
                             </div>
                           </div>
                         </div>

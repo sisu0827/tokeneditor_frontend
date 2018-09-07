@@ -493,7 +493,7 @@ class Tokens extends Component {
                               <button className="editor-btn main big" style={{width:"100%"}}><img src={window.location.origin + '/assets/images/icon_checklist.png'} /> Whitelist user</button> 
                             </div>
                             <div className="col-md-6" style={{textAlign:"center"}}>
-                              <button className="editor-btn main big" style={{width:"100%"}}><h style={{fontWeight:"bold", fontSize:"25px"}}>?</h> Is user whitelisted</button> 
+                              <button className="editor-btn main big" style={{width:"100%"}}><h style={{fontWeight:"bold", fontSize:"21px"}}>?</h> Is user whitelisted</button> 
                             </div>
                           </div>
                         </div>

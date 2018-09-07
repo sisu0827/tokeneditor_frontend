@@ -102,7 +102,7 @@ class Tokens extends Component {
 
             <ul className="list-unstyled">
                 <li>
-                    <a href="/step1"><i className="fab fa-lg fa-ethereum"></i> Generate</a>
+                    <a href="#"><i className="fab fa-lg fa-ethereum"></i> Generate</a>
                 </li>
                 <li className="selected-li">
                     <a href="/Tokens"><i className="fas fa-lg fa-coins"></i> Tokens</a>

@@ -12,6 +12,10 @@ import KycAml                     from './pages/KycAml';
 import Tokens                     from './pages/Tokens';
 import ManageCampaign             from './pages/ManageCampaign';
 import Compaign                   from './pages/Compaign';
+import TokenSetupStep1            from './pages/TokenSetupStep1';
+import TokenSetupStep2            from './pages/TokenSetupStep2';
+import TokenSetupStep3            from './pages/TokenSetupStep3';
+import TokenSetupStep4            from './pages/TokenSetupStep4';
 class App extends Component {
   render() {
     const App = () => (
@@ -28,6 +32,10 @@ class App extends Component {
           <Route path='/Tokens' component={Tokens}/>
           <Route path='/ManageCampaign' component={ManageCampaign}/>
           <Route path='/compaign' component={Compaign}/> 
+          <Route path='/step1' component={TokenSetupStep1}/>
+          <Route path='/step2' component={TokenSetupStep2}/>
+          <Route path='/step3' component={TokenSetupStep3}/>
+          <Route path='/step4' component={TokenSetupStep4}/>
         </Switch>
       </div>
     )

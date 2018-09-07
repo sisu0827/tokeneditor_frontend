@@ -103,14 +103,14 @@ class Affiliate extends Component {
               </div>
             </div>
             <div className="row justify-content-center">
-              <div className="container-fluid px-md-5 col-md-11">
+              <div className="container-fluid px-md-5 col-md-12">
                 <div className="text-center">
                   <p className="Amount">Description</p>
                 </div>
-                <div className="text-left" style={{marginLeft:"5%"}}>
+                <div className="text-center">
                   
-                  <p style={{textalign:"left"}}>Lorem ipsum dolor site amet, consectetur aidpiscing elit. Fusc interdum metus felis, eu lobortis nisi vestibulum</p>
-                  <p style={{textalign:"left"}}>facilisis. Duis vestibulum, augue vitae feugiat sollicitudin, nibh dui tempor diam, quis tristique justo ante vel nulla. </p>
+                  <p>Lorem ipsum dolor site amet, consectetur aidpiscing elit. Fusc interdum metus felis, eu lobortis nisi vestibulum</p>
+                  <p>facilisis. Duis vestibulum, augue vitae feugiat sollicitudin, nibh dui tempor diam, quis tristique justo ante vel nulla. </p>
                   <p>Curabitur rutrum sit amet mi id auctor. Nunc pellentesque, sem quis tincidunt semper, massa ligula venenatis enim,</p>
                   <p>nec euismod turpis tellus quis libero. Duis ullamcorper ullamcorper ullamcorper. Nam eget dictum enim. Donec</p>
                   <p>vitae enim non ipsum dapibus tempus a quis mi. Maecenas nec fringilla eros. Suspendisse et sem hendrerit, tempus </p>

@@ -43,10 +43,10 @@ class Affiliate extends Component {
                 <li>
                     <a href="/Transactions"><i className="fas fa-lg fa-chart-bar"></i> Transactions</a>
                 </li>
-                <li className="selected-li">
+                <li>
                     <a href="/billing"><i className="far fa-lg fa-money-bill-alt"></i> Billing</a>
                 </li>
-                <li>
+                <li className="selected-li">
                     <a href="#"><i className="fas fa-lg fa-users"></i> Affiliate</a>
                 </li>
                 <li>
@@ -200,7 +200,6 @@ class Affiliate extends Component {
                         </div>
                       </div>
                     </div>
-
                   </div>
                 </div>
               </div>

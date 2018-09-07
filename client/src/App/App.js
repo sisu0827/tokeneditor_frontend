@@ -1,16 +1,16 @@
-import React, { Component } from 'react';
-import { Route, Switch } from 'react-router-dom';
-import './App.css';
-import Auth from './pages/Auth';
-import Dashboard from './pages/Dashboard';
-import Register from './pages/Register';
-import Setting from './pages/Setting';
-import Billing from './pages/Billing';
-import Transactions from './pages/Transactions';
-import Affiliate from './pages/Affiliate';
-import KycAml from './pages/KycAml';
-import Tokens from './pages/Tokens';
-
+import React, { Component }       from 'react';
+import { Route, Switch }          from 'react-router-dom';
+import                                 './App.css';
+import Auth                       from './pages/Auth';
+import Dashboard                  from './pages/Dashboard';
+import Register                   from './pages/Register';
+import Setting                    from './pages/Setting';
+import Billing                    from './pages/Billing';
+import Transactions               from './pages/Transactions';
+import Affiliate                  from './pages/Affiliate';
+import KycAml                     from './pages/KycAml';
+import Tokens                     from './pages/Tokens';
+import ManageCampaign             from './pages/ManageCampaign'
 class App extends Component {
   render() {
     const App = () => (
@@ -25,6 +25,7 @@ class App extends Component {
           <Route path='/setting' component={Setting}/>
           <Route path='/billing' component={Billing}/>
           <Route path='/Tokens' component={Tokens}/>
+          <Route path='/ManageCampaign' component={ManageCampaign}/>
         </Switch>
       </div>
     )

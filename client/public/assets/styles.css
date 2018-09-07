@@ -335,6 +335,17 @@ a[data-toggle="collapse"] {
 
 }
 
+.panel-campaign {
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 20px;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+
+    border: 1px solid white;
+    border-radius: 20px;
+}
+
 .panel-danger>.panel-heading {
     color: rgb(69, 70, 123);
     background-color: rgb(69, 70, 123);

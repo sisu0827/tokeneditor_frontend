@@ -43,10 +43,10 @@ class Affiliate extends Component {
                 <li>
                     <a href="/Transactions"><i className="fas fa-lg fa-chart-bar"></i> Transactions</a>
                 </li>
-                <li className="selected-li">
+                <li>
                     <a href="/billing"><i className="far fa-lg fa-money-bill-alt"></i> Billing</a>
                 </li>
-                <li>
+                <li className="selected-li">
                     <a href="#"><i className="fas fa-lg fa-users"></i> Affiliate</a>
                 </li>
                 <li>
@@ -131,7 +131,7 @@ class Affiliate extends Component {
                     <div className="row justify-content-center">
                       <div className="col-md-12" id="stats" style={{backgroundColor: "rgb(69, 70, 123)", color:"white", height:"50px"}}>
                         <div className="text-center">
-                          <p style={{textalign: "center"}}>Statstics</p>
+                          <p style={{textalign: "center"}}>Statistics</p>
                         </div>
                       </div>
                     </div>
@@ -200,7 +200,6 @@ class Affiliate extends Component {
                         </div>
                       </div>
                     </div>
-
                   </div>
                 </div>
               </div>

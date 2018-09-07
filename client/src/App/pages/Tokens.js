@@ -97,7 +97,7 @@ class Tokens extends Component {
       <div className="wrapper">
         <nav id="sidebar" className={this.state.showHideSidenav}>
             <div className="sidebar-header">
-                <h5><img width="25%" height="25%" src="https://i.imgur.com/sMK1rIY.png" />Token Editor</h5>
+                <h5><img width="25%" height="25%" src="https://i.imgur.com/sMK1rIY.png" /><a href="/dashboard">Token Editor</a></h5>
             </div>
 
             <ul className="list-unstyled">
@@ -354,28 +354,28 @@ class Tokens extends Component {
                     <div className="col-md-12 form-group">
                       <div className="col">
                         <p className="Title my-3" style={{textAlign:"center"}}>Start Date</p>
-                        <p className="Amount" style={{textAlign:"center"}}>08/19/18 2:30:56 PM</p>
+                        <p className="Amount" style={{textAlign:"center", color:"rgb(69, 70, 123)"}}>08/19/18 2:30:56 PM</p>
                       </div>
                     </div>
 
                     <div className="col-md-12 form-group my-5">
                       <div className="col">
                         <p className="Title my-3" style={{textAlign:"center"}}>End Date</p>
-                        <p className="Amount" style={{textAlign:"center"}}>08/20/18 12:59:44 PM</p>
+                        <p className="Amount" style={{textAlign:"center", color:"rgb(69, 70, 123)"}}>08/20/18 12:59:44 PM</p>
                       </div>
                     </div>
 
                     <div className="col-md-12 form-group my-5">
                       <div className="col">
                         <p className="Title my-3" style={{textAlign:"center"}}>Ether received</p>
-                        <p className="Amount" style={{textAlign:"center"}}>6</p>
+                        <p className="Amount" style={{textAlign:"center", color:"rgb(69, 70, 123)"}}>6</p>
                       </div>
                     </div>
 
                     <div className="col-md-12 form-group my-5">
                       <div className="col">
                         <p className="Title my-3" style={{textAlign:"center"}}>Min contribution presale</p>
-                        <p className="Amount" style={{textAlign:"center"}}>0.2 ETH</p>
+                        <p className="Amount" style={{textAlign:"center", color:"rgb(69, 70, 123)"}}>0.2 ETH</p>
                       </div>
                     </div>
 
@@ -385,28 +385,28 @@ class Tokens extends Component {
                     <div className="col-md-12 form-group">
                       <div className="col">
                         <p className="Title my-3" style={{textAlign:"center"}}>Tokens Sold</p>
-                        <p className="Amount" style={{textAlign:"center"}}>3,333</p>
+                        <p className="Amount" style={{textAlign:"center", color:"rgb(69, 70, 123)"}}>3,333</p>
                       </div>
                     </div>
 
                     <div className="col-md-12 form-group my-5">
                       <div className="col">
                         <p className="Title my-3" style={{textAlign:"center"}}>Token price</p>
-                        <p className="Amount" style={{textAlign:"center"}}>0.0003 ETH</p>
+                        <p className="Amount" style={{textAlign:"center", color:"rgb(69, 70, 123)"}}>0.0003 ETH</p>
                       </div>
                     </div>
 
                     <div className="col-md-12 form-group my-5">
                       <div className="col">
                         <p className="Title my-3" style={{textAlign:"center"}}>Which sale</p>
-                        <p className="Amount" style={{textAlign:"center"}}>Public Sale</p>
+                        <p className="Amount" style={{textAlign:"center", color:"rgb(69, 70, 123)"}}>Public Sale</p>
                       </div>
                     </div>
 
                     <div className="col-md-12 form-group my-5">
                       <div className="col">
                         <p className="Title my-3" style={{textAlign:"center"}}>Min contribution public sale</p>
-                        <p className="Amount" style={{textAlign:"center"}}>0.1 ETH</p>
+                        <p className="Amount" style={{textAlign:"center", color:"rgb(69, 70, 123)"}}>0.1 ETH</p>
                       </div>
                     </div>
 

@@ -335,6 +335,17 @@ a[data-toggle="collapse"] {
 
 }
 
+.panel-campaign {
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 20px;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+
+    border: 1px solid white;
+    border-radius: 20px;
+}
+
 .panel-danger>.panel-heading {
     color: rgb(69, 70, 123);
     background-color: rgb(69, 70, 123);
@@ -632,7 +643,7 @@ a[data-toggle="collapse"] {
 
   border-top:rgb(69, 70, 123);
   border-width: 12px;
-  border-top: solid #CCC;
+  border-top: solid rgb(69, 70, 123);
   border-radius: 6px;
   border-top-width: 20px;
 
@@ -754,4 +765,20 @@ https://freefrontend.com/css-menu/#dropdown-menu
 hr {
   border-style: dashed;
   border-color: rgb(69, 70, 120);
+}
+
+.panel-body-campaign {
+    width: 100%;
+    height: 300px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    padding: 10px 20px;
+    margin: 0px 0;
+    transition: all 0.3s;
+    background-image: url('images/bg_campaign.png');
 }

@@ -31,7 +31,6 @@
       You need to enable JavaScript to run this app.
     </noscript>
     <div id="root"></div>
-    <div id="modal"></div>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
@@ -57,10 +56,10 @@
           var sel = $(this).data('title');
           var tog = $(this).data('toggle');
           $('#'+tog).prop('value', sel);
-          
+
           $('a[data-toggle="'+tog+'"]').not('[data-title="'+sel+'"]').removeClass('aleft-active').addClass('aleft-nonactive');
           $('a[data-toggle="'+tog+'"][data-title="'+sel+'"]').removeClass('notActive').addClass('active');
-      })      
+      })
 
       function changeClass(){
         alert("ok");
@@ -69,11 +68,15 @@
       $(document).click(function(event) {
       $('.toggle > input').prop('checked', false);
       if ( !$('.toggle > input').is(':checked') &&
-        $(event.target).parents('.toggle').is('.toggle')) 
+        $(event.target).parents('.toggle').is('.toggle'))
         {
           $('.toggle > input').prop('checked', true);
         }
       })
+
+      $(function () {
+          $('[data-toggle="tooltip"]').tooltip()
+        })
 
     </script>
   </body>

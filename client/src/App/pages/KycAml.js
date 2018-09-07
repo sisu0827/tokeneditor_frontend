@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link }             from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 class KycAml extends Component {
 
@@ -23,7 +23,7 @@ class KycAml extends Component {
       <div className="wrapper">
         <nav id="sidebar" className={this.state.showHideSidenav}>
             <div className="sidebar-header">
-                <h5><img width="25%" height="25%" src="https://i.imgur.com/sMK1rIY.png" /><a href="/dashboard">Token Editor</a></h5>
+                <h5><img width="25%" height="25%" src="https://i.imgur.com/sMK1rIY.png" />Token Editor</h5>
             </div>
 
             <ul className="list-unstyled">
@@ -31,12 +31,12 @@ class KycAml extends Component {
                     <a href="#"><i className="fab fa-lg fa-ethereum"></i> Generate</a>
                 </li>
                 <li>
-                    <a href="/Tokens"><i className="fas fa-lg fa-coins"></i> Tokens</a>
+                    <a href="#"><i className="fas fa-lg fa-coins"></i> Tokens</a>
                 </li>
                 <li>
                     <a href="#"><i className="fas fa-lg fa-sign"></i> Campaigns</a>
                 </li>
-                <li className="selected-li">
+                <li>
                     <a href="/KycAml"><i className="fas fa-lg fa-id-card"></i> KYC/AML</a>
                 </li>
                 <li>
@@ -131,8 +131,8 @@ class KycAml extends Component {
                   </div>
                 </div> 
               </div>
-              <div className="table-responsive editor-block">
-                <table className="table" bordercolor="white">
+              <div className="table-responsive row editor-block" style={{borderCollapse:"collapse"}}>
+                <table className="table" style={{borderCollapse:"collapse"}}>
                   <thead style={{fontSize:"15px", textAlign:"center"}}>
                     <tr>
                       <th>Name</th>
@@ -140,9 +140,9 @@ class KycAml extends Component {
                       <th>Country</th>
                       <th>Wallet address</th>
                       <th>Verified</th>
+                      
                     </tr>
                   </thead>
-
                   <tbody style={{fontSize:"13px", textAlign:"center"}}>
                     <tr className="active">
                       <td>Stive</td>

@@ -80,7 +80,7 @@ h2 {
 	font-size: 18px;
 	text-align: center;
 	padding: 10px 20px;
-	margin: 5px 0;
+	margin: 6px 6px;
 	letter-spacing: 1.67px;
 	cursor: pointer;
 	transition: all 0.3s;
@@ -92,7 +92,7 @@ h2 {
 
 .editor-btn.small {
 	font-size: 14px;
-	padding: 5px 10px;
+	padding: 6px 10px;
 }
 
 .editor-btn:hover {
@@ -126,7 +126,7 @@ h2 {
 	border-radius: 20px;
 	background-color: white;
 	padding: 10px;
-	margin: 5px 0;
+	margin: 6px 0;
 }
 
 #second:before {
@@ -137,7 +137,7 @@ h2 {
     height: 330px;
     letter-spacing: -16px;
     line-height: 330px;
-    opacity: 0.1; 
+    opacity: 0.1;
     position: absolute;
     left: calc(50% - 75px);
 }
@@ -150,7 +150,7 @@ h2 {
     height: 330px;
     letter-spacing: -16px;
     line-height: 330px;
-    opacity: 0.1; 
+    opacity: 0.1;
     position: absolute;
     left: calc(50% - 75px);
 }
@@ -161,7 +161,7 @@ h2 {
 	font-size: 24px;
 }
 
-.progress { 
+.progress {
 	height: 20px;
     position: relative;
     background: white;
@@ -230,7 +230,6 @@ a:focus {
     transition: all 0.3s;
 }
 
-
 #sidebar.active {
     margin-left: -250px;
 }
@@ -244,7 +243,6 @@ a:focus {
     border-bottom: 1px solid #47748b;
 }
 
-
 #sidebar ul p {
     color: #fff;
     padding: 10px;
@@ -256,19 +254,16 @@ a:focus {
     display: block;
 }
 
-
 #sidebar ul li a:hover {
     color: white;
     background: #45467B;
 }
-
 
 #sidebar ul li.active>a,
 a[aria-expanded="true"] {
     color: #fff;
     background: #6d7fcc;
 }
-
 
 a[data-toggle="collapse"] {
     position: relative;
@@ -299,13 +294,9 @@ a[data-toggle="collapse"] {
     #sidebar {
         margin-left: -250px;
     }
-
-
-
     #sidebar.active {
         margin-left: 0;
     }
-
     #sidebarCollapse span {
         display: none;
     }
@@ -333,17 +324,6 @@ a[data-toggle="collapse"] {
     border: 1px dashed #454679;
     border-radius: 20px;
 
-}
-
-.panel-campaign {
-    margin-bottom: 20px;
-    background-color: #fff;
-    border-radius: 20px;
-    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
-    box-shadow: 0 1px 1px rgba(0,0,0,.05);
-
-    border: 1px solid white;
-    border-radius: 20px;
 }
 
 .panel-danger>.panel-heading {
@@ -380,17 +360,9 @@ a[data-toggle="collapse"] {
     border-radius: 20px;
     background-color: white;
     padding: 10px;
-    margin: 5px 0;
+    margin: 6px 0;
 }
 
-.editor-button {
-    border: 1px dashed #454679;
-    border-radius: 20px;
-    background-color: white;
-    padding: 10px;
-    margin: 15px 10%;
-    width: 80%;
-}
 
 .Title {
     font-size: 16px;
@@ -436,10 +408,10 @@ a[data-toggle="collapse"] {
     border: 1px dashed #454679;
     border-radius: 20px;
     background-color: white;
-    
+
 }
 
-.option-btn { 
+.option-btn {
     height: 30px;
     width: 50px;
     position: relative;
@@ -518,7 +490,7 @@ a[data-toggle="collapse"] {
     border: 1px solid #454679;
     border-radius: 5px;
     background-color: white;
-    
+
 }
 
 .aleft-active {
@@ -529,7 +501,7 @@ a[data-toggle="collapse"] {
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     background-color: #454679;
-    
+
 }
 .aright-nonactive {
     height: 30px;
@@ -540,7 +512,7 @@ a[data-toggle="collapse"] {
     border-bottom-left-radius: 0px;
     background-color: white;
     border: 1px solid #454679;
-    
+
 }
 .aleft-nonactive {
     height: 30px;
@@ -551,7 +523,7 @@ a[data-toggle="collapse"] {
     border-bottom-left-radius: 5px;
     background-color: white;
     border: 1px solid #454679;
-    
+
 }
 .aright-active {
     height: 30px;
@@ -562,7 +534,7 @@ a[data-toggle="collapse"] {
     border-bottom-left-radius: 0px;
     background-color: #454679;
     border: 1px solid #454679;
-    
+
 }
 
 .switch {
@@ -612,6 +584,34 @@ a[data-toggle="collapse"] {
     color: white;
 }
 
+.editor-token-setup {
+    display: inline-flex;
+    padding: 0;
+    justify-content: center;
+    background-color: white;
+    border: dashed 1px #000;
+    border-radius: 10px;
+    font-size: 18px;
+    text-align:
+    center; margin: 6px 0;
+    letter-spacing: 1.67px;
+}
+
+.editor-token-setup > .step-section {
+    margin: -1px;
+    background-color: #000;
+    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    padding: 10px 20px;
+    letter-spacing: 1.67px;
+}
+
+.editor-token-setup > .title-section {
+    margin: auto 10px;
+}
+
 .dropdown {
   width: 100%;
   display: inline-block;
@@ -643,7 +643,7 @@ a[data-toggle="collapse"] {
 
   border-top:rgb(69, 70, 123);
   border-width: 12px;
-  border-top: solid rgb(69, 70, 123);
+  border-top: solid #CCC;
   border-radius: 6px;
   border-top-width: 20px;
 
@@ -655,7 +655,7 @@ a[data-toggle="collapse"] {
   padding: 0;
   position: absolute;
   width: 93%;
-  box-shadow: 0 6px 5px -5px rgba(0,0,0,0.3);
+  /*box-shadow: 0 6px 5px -5px rgba(0,0,0,0.3);*/
   overflow: hidden;
 }
 .dropdown a, .dropdown.toggle > label {
@@ -669,17 +669,15 @@ a[data-toggle="collapse"] {
   color: grey;
   border-radius: 10px;
   border-style: solid;
-  border-width: 2px;
+  border-width: 1px;
   border-color: rgb(69, 70, 123);
   background-color: white;
-  border-bottom-width: 2px;
 }
 .dropdown li {
   width: 100%;
   height: 0;
   overflow: hidden;
   transition: all 500ms;
-  margin-top: 3px;
 }
 .dropdown.hover li {
   transition-delay: 300ms;
@@ -711,8 +709,8 @@ https://freefrontend.com/css-menu/#dropdown-menu
 .dropdown li:first-child a:hover::before {
   border-bottom-color: #EEE;
 }
-.dropdown.hover:hover li, .dropdown.toggle > input:checked ~ ul li {          
-  height: 44px;
+.dropdown.hover:hover li, .dropdown.toggle > input:checked ~ ul li {
+  height: 40px;
   width: 100%;
 }
 
@@ -720,65 +718,7 @@ https://freefrontend.com/css-menu/#dropdown-menu
   /*padding-top: 2px;*/
 }
 
-.modal-background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background-color: rgba(33, 33, 33, 0.85);
-  z-index: 1000;
-}
-
-.modal-dialog {
-  position: fixed;
-  top: 20%;
-  left: 10%;
-  right: 10%;
-  bottom: 20%;
-  text-align: center;
-  background-color: rgba(250, 250, 250, 1);
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
-  z-index: 1001;
-}
-
-.modal-dialog > header {
-  background: rgb(69, 70, 123);
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 2rem;
-  padding: 0 2rem;
-  min-height: 50px;
-}
-
-.modal-dialog > header > button {
-  border: none;
-  padding: 0;
-  font-size: 1.2rem;
-  background: inherit;
-  color: white;
-  cursor: pointer;
-}
-
-hr {
-  border-style: dashed;
-  border-color: rgb(69, 70, 120);
-}
-
-.panel-body-campaign {
-    width: 100%;
-    height: 300px;
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 20px;
-    border-top-left-radius: 0px;
-    border-bottom-left-radius: 0px;
-    color: white;
-    font-size: 18px;
-    text-align: center;
-    padding: 10px 20px;
-    margin: 0px 0;
-    transition: all 0.3s;
-    background-image: url('images/bg_campaign.png');
+/* TODO better look for select */
+select {
+    background-color: white;
 }

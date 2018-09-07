@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link }             from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 class Affiliate extends Component {
@@ -24,7 +24,7 @@ class Affiliate extends Component {
       <div className="wrapper">
         <nav id="sidebar" className={this.state.showHideSidenav}>
             <div className="sidebar-header">
-                <h5><img width="25%" height="25%" src="https://i.imgur.com/sMK1rIY.png" /><a href="/dashboard">Token Editor</a></h5>
+                <h5><img width="25%" height="25%" src="https://i.imgur.com/sMK1rIY.png" />Token Editor</h5>
             </div>
 
             <ul className="list-unstyled">
@@ -32,7 +32,7 @@ class Affiliate extends Component {
                     <a href="#"><i className="fab fa-lg fa-ethereum"></i> Generate</a>
                 </li>
                 <li>
-                    <a href="/Tokens"><i className="fas fa-lg fa-coins"></i> Tokens</a>
+                    <a href="#"><i className="fas fa-lg fa-coins"></i> Tokens</a>
                 </li>
                 <li>
                     <a href="#"><i className="fas fa-lg fa-sign"></i> Campaigns</a>
@@ -46,7 +46,7 @@ class Affiliate extends Component {
                 <li>
                     <a href="/billing"><i className="far fa-lg fa-money-bill-alt"></i> Billing</a>
                 </li>
-                <li className="selected-li">
+                <li>
                     <a href="#"><i className="fas fa-lg fa-users"></i> Affiliate</a>
                 </li>
                 <li>
@@ -131,7 +131,7 @@ class Affiliate extends Component {
                     <div className="row justify-content-center">
                       <div className="col-md-12" id="stats" style={{backgroundColor: "rgb(69, 70, 123)", color:"white", height:"50px"}}>
                         <div className="text-center">
-                          <p style={{textalign: "center"}}>Statistics</p>
+                          <p style={{textalign: "center"}}>Statstics</p>
                         </div>
                       </div>
                     </div>
@@ -200,6 +200,7 @@ class Affiliate extends Component {
                         </div>
                       </div>
                     </div>
+
                   </div>
                 </div>
               </div>

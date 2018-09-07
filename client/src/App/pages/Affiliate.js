@@ -131,7 +131,7 @@ class Affiliate extends Component {
                     <div className="row justify-content-center">
                       <div className="col-md-12" id="stats" style={{backgroundColor: "rgb(69, 70, 123)", color:"white", height:"50px"}}>
                         <div className="text-center">
-                          <p style={{textalign: "center"}}>Statstics</p>
+                          <p style={{textalign: "center"}}>Statistics</p>
                         </div>
                       </div>
                     </div>

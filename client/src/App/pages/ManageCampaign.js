@@ -148,7 +148,7 @@ class Affiliate extends Component {
             <div className="row justify-content-center">
               <div className="row">
                 <button className="editor-btn main big my-5"><img src={window.location.origin + '/assets/images/icon_invest_white.png'} /> Invest</button> 
-                <button className="editor-btn main big my-5 mx-3"><img src={window.location.origin + '/assets/images/icon_gotohome.png'} /> Go to website</button> 
+                <Link to={'/compaign'}><button className="editor-btn main big my-5 mx-3"><img src={window.location.origin + '/assets/images/icon_gotohome.png'} /> Go to website</button></Link> 
               </div>
             </div>
         </div>

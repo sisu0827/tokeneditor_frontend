@@ -1,15 +1,19 @@
 import React, { Component } from 'react';
-import { Link }             from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import Switch from 'react-toggle-switch';
 
-class KycAml extends Component {
+
+class Billingupdate extends Component {
 
   constructor(props) {
     super(props)
-    this.state = {"showHideSidenav": ""}
-  }
+    this.state = {
+      showHideSidenav: ""
+    }
+  }   
 
   componentDidMount(){
-    document.body.id=""
+    document.body.id="billing"
   }
 
   toggleSidenav() {
@@ -17,10 +21,13 @@ class KycAml extends Component {
     this.setState({"showHideSidenav":css});
   }
 
+
+
   render() {
 
     return (
       <div className="wrapper">
+
         <nav id="sidebar" className={this.state.showHideSidenav}>
             <div className="sidebar-header">
                 <h5><img width="25%" height="25%" src="https://i.imgur.com/sMK1rIY.png" /><a href="/dashboard">Token Editor</a></h5>
@@ -36,13 +43,13 @@ class KycAml extends Component {
                 <li>
                     <a href="/compaign"><i className="fas fa-lg fa-sign"></i> Campaigns</a>
                 </li>
-                <li className="selected-li">
+                <li>
                     <a href="/KycAml"><i className="fas fa-lg fa-id-card"></i> KYC/AML</a>
                 </li>
                 <li>
                     <a href="/Transactions"><i className="fas fa-lg fa-chart-bar"></i> Transactions</a>
                 </li>
-                <li>
+                <li className="selected-li">
                     <a href="/billing"><i className="far fa-lg fa-money-bill-alt"></i> Billing</a>
                 </li>
                 <li>
@@ -77,9 +84,8 @@ class KycAml extends Component {
             </div>
             <p className="text-muted text-center my-5">@ 2018 Token Editor</p>
         </nav>
-
         <div id="content">
-
+          
             <nav className="navbar navbar-expand-lg">
                 <div className="container-fluid">
 
@@ -103,104 +109,120 @@ class KycAml extends Component {
                 </div>
             </nav>
 
-            <div className="container-fluid px-md-5">
-
+            <div className="container-fluid col-md-12">
+              
               <div className="row justify-content-center">
-                <h2 className="text-uppercase">KYC/AML</h2>
+                <h2 className="text-uppercase">Billing</h2>
               </div>
 
-              <div className="row my-4">
-                <div className="col-md-12">
-                  <div className="row editor-block">
-                      <div className="col-md-12">
-                        <div className="row text-center align-items-center square">
-                          <div className="col">
-                            <p>Choose your campagin</p>
-                            
-                            <div className="dropdown toggle col-md-6">
-                              <input id="t1" type="checkbox"></input>
-                              <label>Example campagin</label>
-                              <ul>
-                                <li><a href="#">campagin 1</a></li>
-                                <li><a href="#">campagin 2</a></li>
-                              </ul>
-                            </div>
-                          </div>
+              <div className="row my-4 text-center">
+                <div className="col col-md-12">
+                  <form className="row justify-content-center" onSubmit={this.handleSubmit}>
+                    <div className="editor-block container-fluid col-md-8">
+                      <div className="row container-fluid my-4">
+                        <div className="row col">
+                        <div className="col">
+                          <p className="text-muted">Balance</p>
+                          <p className="font-weight-bold m-0">4.32 ETH</p>
+                        </div>
+                        <div className="col">
+                          <p className="text-muted">Usage</p>
+                          <p className="font-weight-bold m-0">17.12 ETH</p>
+                        </div>
+                        <div className="col">
+                          <button className="editor-btn main big"><img src="assets/images/dollar_icon.png" />&nbsp; Refill</button>
                         </div>
                       </div>
-                  </div>
-                </div> 
-              </div>
-              <div className="table-responsive editor-block">
-                <table className="table" bordercolor="white">
-                  <thead style={{fontSize:"15px", textAlign:"center"}}>
-                    <tr>
-                      <th>Name</th>
-                      <th>Email</th>
-                      <th>Country</th>
-                      <th>Wallet address</th>
-                      <th>Verified</th>
-                    </tr>
-                  </thead>
+                      </div>
+                    </div>
+                    <div className="settingeditor-block container-fluid my-5">
+                      <div className="row container-fluid my-4">
+                        <table className="col-md-12">
+                          <tr>
+                            <th>Date</th>
+                            <th>Amount</th> 
+                            <th>Type</th>
+                            <th>Description</th>
+                          </tr>
+                          <tr>
+                            <td colspan="4"><hr className="col-md-12"/></td>
+                          </tr>
+                          
+                          <tr >
+                            <td>2018-8-24 23:32</td>
+                            <td>1.2 ETH</td>
+                            <td>Refill</td>
+                            <td>Balance refill from ETH</td>
+                          </tr>
+                          <tr>
+                            <td>2018-8-24 23:32</td>
+                            <td>1.2 ETH</td>
+                            <td>Refill</td>
+                            <td>Balance refill from ETH</td>
+                          </tr>
+                          <tr>
+                            <td>2018-8-24 23:32</td>
+                            <td>1.2 ETH</td>
+                            <td>Refill</td>
+                            <td>Balance refill from ETH</td>
+                          </tr>
+                          <tr>
+                            <td>2018-8-24 23:32</td>
+                            <td>1.2 ETH</td>
+                            <td>Refill</td>
+                            <td>Balance refill from ETH</td>
+                          </tr>
+                          <tr>
+                            <td>2018-8-24 23:32</td>
+                            <td>1.2 ETH</td>
+                            <td>Refill</td>
+                            <td>Balance refill from ETH</td>
+                          </tr>
+                          <tr>
+                            <td>2018-8-24 23:32</td>
+                            <td>1.2 ETH</td>
+                            <td>Refill</td>
+                            <td>Balance refill from ETH</td>
+                          </tr>
+                          <tr>
+                            <td>2018-8-24 23:32</td>
+                            <td>1.2 ETH</td>
+                            <td>Refill</td>
+                            <td>Balance refill from ETH</td>
+                          </tr>
+                          <tr>
+                            <td>2018-8-24 23:32</td>
+                            <td>1.2 ETH</td>
+                            <td>Refill</td>
+                            <td>Balance refill from ETH</td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
 
-                  <tbody style={{fontSize:"13px", textAlign:"center"}}>
-                    <tr className="active">
-                      <td>Stive</td>
-                      <td>stive22@gmail.com</td>
-                      <td>United States</td>
-                      <td>0xad4777029ae71f2b2kall</td>
-                      <td>No</td>
-                      <button className="editor-btn main small">
-                        <i className="fas fa-edit"></i> Manage
-                      </button>
-                    </tr>
-                    <tr>
-                      <td>Stive</td>
-                      <td>stive22@gmail.com</td>
-                      <td>United States</td>
-                      <td>0xad4777029ae71f2b2kall</td>
-                      <td>No</td>
-                      <button className="editor-btn main small">
-                        <i className="fas fa-edit"></i> Manage
-                      </button>
-                    </tr>
-                    <tr>
-                      <td>Stive</td>
-                      <td>stive22@gmail.com</td>
-                      <td>United States</td>
-                      <td>0xad4777029ae71f2b2kall</td>
-                      <td>No</td> 
-                      <button className="editor-btn main small">
-                        <i className="fas fa-edit"></i> Manage
-                      </button>                     
-                    </tr>
-                    <tr>
-                      <td>Stive</td>
-                      <td>stive22@gmail.com</td>
-                      <td>United States</td>
-                      <td>0xad4777029ae71f2b2kall</td>
-                      <td>No</td>
-                      <button className="editor-btn main small">
-                        <i className="fas fa-edit"></i> Manage
-                      </button>
-                    </tr>
-                    <tr>
-                      <td>Stive</td>
-                      <td>stive22@gmail.com</td>
-                      <td>United States</td>
-                      <td>0xad4777029ae71f2b2kall</td>
-                      <td>No</td>
-                      <button className="editor-btn main small">
-                        <i className="fas fa-edit"></i> Manage
-                      </button>
-                    </tr>
 
-                  </tbody>
-                </table>
+                  </form>
+                </div>
+
+
               </div>
+
+
+
+              <div className="row justify-content-center my-4">
+              </div>
+              <div className="row justify-content-center my-4">
+              </div>
+              <div className="row justify-content-center my-4">
+              </div>
+              <div className="row justify-content-center my-4">
+              </div>  
+              <div className="row justify-content-center my-4">
+              </div>  
+              <div className="row justify-content-center my-4">
+              </div>                                                   
             </div>
         </div>
-
         <footer className="footer">
           <div className="container-fluid">
             <div className="row justify-content-center">
@@ -230,4 +252,4 @@ class KycAml extends Component {
     );
   }
 }
-export default KycAml;
+export default Billingupdate;

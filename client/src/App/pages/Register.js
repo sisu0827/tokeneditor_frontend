@@ -18,7 +18,7 @@ class Register extends Component {
       <div className="container my-4">
         <div className="container">
           <Link to={'/'}>
-              <div className="back-btn"><i className="fas fa-sg fa-back"></i><span className="span-space"/> Back</div>    
+              <div className="back-btn"><img src="assets/images/back_icon.png" />&nbsp; Back</div>    
           </Link>
         </div>
         <div className="row text-center my-10">
@@ -61,7 +61,7 @@ class Register extends Component {
               <div className="w-100"></div>                                                        
               <div className="col form-group">
                 <Link to={'/dashboard'}>
-                  <button className="editor-btn big"><i className="fas fa-sg fa-check"></i> Register</button>
+                  <button className="editor-btn big"><i className="fa fa-check-circle"></i> Register</button>
                 </Link>
               </div>
             </form>

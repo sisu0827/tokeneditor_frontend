@@ -5,12 +5,13 @@ import Auth                       from './pages/Auth';
 import Dashboard                  from './pages/Dashboard';
 import Register                   from './pages/Register';
 import Setting                    from './pages/Setting';
-import Billing                    from './pages/Billing';
+import Billing                    from './pages/Billingupdate';
 import Transactions               from './pages/Transactions';
 import Affiliate                  from './pages/Affiliate';
 import KycAml                     from './pages/KycAml';
 import Tokens                     from './pages/Tokens';
-import ManageCampaign             from './pages/ManageCampaign'
+import ManageCampaign             from './pages/ManageCampaign';
+import Compaign                   from './pages/Compaign';
 class App extends Component {
   render() {
     const App = () => (
@@ -26,6 +27,7 @@ class App extends Component {
           <Route path='/billing' component={Billing}/>
           <Route path='/Tokens' component={Tokens}/>
           <Route path='/ManageCampaign' component={ManageCampaign}/>
+          <Route path='/compaign' component={Compaign}/> 
         </Switch>
       </div>
     )

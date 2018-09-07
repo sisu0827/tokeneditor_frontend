@@ -35,7 +35,7 @@ class Transactions extends Component {
                     <a href="/Tokens"><i className="fas fa-lg fa-coins"></i> Tokens</a>
                 </li>
                 <li>
-                    <a href="#"><i className="fas fa-lg fa-sign"></i> Campaigns</a>
+                    <a href="/compaign"><i className="fas fa-lg fa-sign"></i> Campaigns</a>
                 </li>
                 <li>
                     <a href="/KycAml"><i className="fas fa-lg fa-id-card"></i> KYC/AML</a>
@@ -44,7 +44,7 @@ class Transactions extends Component {
                     <a href="#"><i className="fas fa-lg fa-chart-bar"></i> Transactions</a>
                 </li>
                 <li>
-                    <a href="billing"><i className="far fa-lg fa-money-bill-alt"></i> Billing</a>
+                    <a href="/billing"><i className="far fa-lg fa-money-bill-alt"></i> Billing</a>
                 </li>
                 <li>
                     <a href="/Affiliate"><i className="fas fa-lg fa-users"></i> Affiliate</a>

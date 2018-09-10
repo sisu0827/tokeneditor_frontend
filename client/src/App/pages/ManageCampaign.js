@@ -89,7 +89,7 @@ class Affiliate extends Component {
                   <p className="Amount my-0">Token address</p>
                   <p className="Title my-0" style={{color:"rgb(196, 191, 191)"}}>Click to check in etherscan.io</p>
                   <div className="row justify-content-center">
-                    <label className="editor-btn link big" for="male" style={{backgroundColor:"white", color:"rgb(69, 70, 123)", fontWeight:"bold"}}>https://etherscan.io/token/0x57c9356fc44068</label>
+                    <label className="editor-btn link big" for="male" style={{backgroundColor:"white", color:"rgb(69, 70, 123)", fontWeight:"bold"}}>https://etherscan.io /token/ 0x57c9356fc44068</label>
                   </div>
                 </div>
               </div>

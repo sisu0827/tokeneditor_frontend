@@ -60,11 +60,6 @@ class Register extends Component {
                               <li><a href="#">No Softcap & No hardcap</a></li>
                             </ul>
                         </div>
-//                         <select className="editor-input w-100">
-//                           <option disabled selected hidden>Select ICO type</option>
-//                           <option value="soft-cup">Soft Cup</option>
-//                           <option value="hard-cup">Hard Cup</option>
-//                         </select>
                       </div>
                       <div className="w-100"></div>
                     </div>

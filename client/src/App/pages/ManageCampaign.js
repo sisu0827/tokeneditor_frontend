@@ -76,11 +76,7 @@ class Affiliate extends Component {
                                 </div>
                               </div>
                             </div>
-                            <div className="col-md-12">
-                              <div className="col">
-                                <button className="editor-btn main big my-5" style={{backgroundColor:"white", color:"rgb(69, 70, 123)"}}><img src={window.location.origin + '/assets/images/icon_invest.png'} /> Invest</button> 
-                              </div>
-                            </div>
+                            <button className="editor-btn main big my-5" style={{backgroundColor:"white", color:"rgb(69, 70, 123)"}}><img src={window.location.origin + '/assets/images/icon_invest.png'} /> Invest</button> 
                           </div>
                         </div>
                       </div>

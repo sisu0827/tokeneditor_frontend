@@ -943,9 +943,9 @@ hr {
   
   color: white;
   background-color: #454679;
-  padding: 10px 20px;
+  padding: 13px 10px;
   border-radius: 8px;
-  font-size: 15px;
+  font-size: 12px;
 
 }
 
@@ -1036,7 +1036,7 @@ hr {
   overflow: hidden;
   background-color: white;
   border: 1px solid #ccc;
-  border-radius: 10px;
+  border-radius: 20px;
   box-sizing: border-box;
   text-align: left;
   color: #333;
@@ -1071,4 +1071,28 @@ hr {
 
 .mousepoint-change {
   cursor: pointer;
+}
+
+.editor-input-custom {
+  border: 1px solid rgba(0,0,0,0.30);
+  border-radius: 10px;
+  padding: 10px 20px;
+
+}
+
+.editor-input-custom::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    font-size: 16px;
+    color: #BEBEBE;
+}
+.editor-input-custom::-moz-placeholder { /* Firefox 19+ */
+    font-size: 16px;
+    color: #BEBEBE;
+}
+.editor-input-custom:-ms-input-placeholder { /* IE 10+ */
+    font-size: 16px;
+    color: #BEBEBE;
+}
+.editor-input-custom:-moz-placeholder { /* Firefox 18- */
+    font-size: 16px;
+    color: #BEBEBE;
 }

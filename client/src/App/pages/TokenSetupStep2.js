@@ -52,11 +52,14 @@ class Register extends Component {
                       <div className="w-100"></div>
                       <div className="col-md-12 form-group">
                         <p>ICO type <i className="fa fa-question-circle main-color" data-toggle="tooltip" data-placement="top" title="ICO type tooltip on top"></i></p>
-                        <select className="editor-input w-100">
-                          <option disabled selected hidden>Select ICO type</option>
-                          <option value="soft-cup">Soft Cup</option>
-                          <option value="hard-cup">Hard Cup</option>
-                        </select>
+                        <div class="dropdown toggle col-md-6"><input id="t1" type="checkbox">
+                          <label>Select ICO type</label>
+                            <ul>
+                              <li><a href="#">Soft Cap</a></li>
+                              <li><a href="#">Hard Cap</a></li>
+                              <li><a href="#">No Softcap & No hardcap</a></li>
+                            </ul>
+                        </div>
                       </div>
                       <div className="w-100"></div>
                     </div>

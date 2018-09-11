@@ -52,7 +52,7 @@ class Register extends Component {
                       <div className="w-100"></div>
                       <div className="col-md-12 form-group">
                         <p>ICO type <i className="fa fa-question-circle main-color" data-toggle="tooltip" data-placement="top" title="ICO type tooltip on top"></i></p>
-                        <div class="dropdown toggle col-md-6"><input id="t1" type="checkbox">
+                        <div class="dropdown toggle col-md-6"><input id="t1" type="checkbox"/>
                           <label>Select ICO type</label>
                             <ul>
                               <li><a href="#">Soft Cap</a></li>

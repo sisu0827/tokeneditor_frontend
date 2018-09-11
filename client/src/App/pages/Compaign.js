@@ -6,6 +6,7 @@ import Select from 'react-select';
 import Dropdown from 'react-dropdown';
 import Switch from 'react-toggle-switch';
 import { CountryDropdown, RegionDropdown } from 'react-country-region-selector';
+import CountrySelect from "react-country-select";
 
 const customStyles = {
   content : {
@@ -57,6 +58,10 @@ Modal.setAppElement('#modal')
 
 class Compaign extends Component {
 
+    propTypes : {
+        onSelect: React.PropTypes.func
+    }
+
   constructor(props) {
     super(props)
     this.state = {  showHideSidenav   : "",
@@ -70,9 +75,13 @@ class Compaign extends Component {
                     modal6IsOpen       : false,
                     switched: false,
                     country: '', 
-                    region: ''
+                    region: '',
+                    tag: null,
+                    tagcountry: null
     };
 
+    this.onSelect = this.onSelect.bind(this);
+    this.onSelectCountry = this.onSelectCountry.bind(this);
     this.openModal        = this.openModal.bind(this);
     this.afterOpenModal   = this.afterOpenModal.bind(this);
     this.closeModal       = this.closeModal.bind(this);
@@ -197,6 +206,16 @@ class Compaign extends Component {
   selectRegion (val) {
     this.setState({ region: val });
   }  
+
+  onSelect(val) {
+    console.log("values selected are:", val);
+    //you can handle options selected here.
+  }
+  onSelectCountry(val) {
+    console.log("values selected are:", val);
+    //you can handle options selected here.
+  }
+
   render() {
     const { FaIcon, FaStack } = require('react-fa-icon');
     const { selectedOption } = this.state;
@@ -595,24 +614,22 @@ class Compaign extends Component {
                   <div className="w-100 my-2"></div>
                   <div className="col" align="center">
                     <form className="row justify-content-center" onSubmit={this.handleSubmit}>
-                      <div className="col-md-5 form-group">
+                      <div className="col-md-7 form-group">
                         <p>Image <img src="assets/images/question_mark.png" /></p>
                         <div className="row form-group">
-                          <input type="text" className="editor-input col-md-9" placeholder="Text" />
-                          &nbsp;&nbsp;&nbsp;
-                          <div class="upload-btn-wrapper">
+                          &nbsp;&nbsp;&nbsp;<input type="text" className="editor-input-custom col-md-9 col" placeholder="Text" />
+                          <div class="upload-btn-wrapper col">
                             <button class="fileselectbtn">Upload</button>
                             <input type="file" name="myfile" />
                           </div>
                         </div>
                       </div>
                       <div className="w-100"></div>
-                      <div className="col-md-5 form-group">
+                      <div className="col-md-7 form-group">
                         <p>Whitepaper <img src="assets/images/question_mark.png" /></p>
                         <div className="row form-group">
-                          <input type="text" className="editor-input col-md-9" placeholder="Text" />
-                          &nbsp;&nbsp;&nbsp;
-                          <div class="upload-btn-wrapper">
+                          &nbsp;&nbsp;&nbsp;<input type="text" className="editor-input-custom col-md-9 col" placeholder="Text" />
+                          <div class="upload-btn-wrapper col">
                             <button class="fileselectbtn">Upload</button>
                             <input type="file" name="myfile" />
                           </div>
@@ -620,7 +637,7 @@ class Compaign extends Component {
                       </div>
                       <div className="w-100"></div>
 
-                      <div className="col-md-5 form-group">
+                      <div className="col-md-7 form-group">
                         <p>Video <img src="assets/images/question_mark.png" /></p>
                         <input type="text" className="editor-input w-100" placeholder="Text" />
                       </div>
@@ -723,8 +740,8 @@ class Compaign extends Component {
                       <div className="col-md-5 form-group">
                         <p>Contributor Table <img src="assets/images/question_mark.png" /></p>
                         <div className="row">
-                          <input type="checkbox" className="check-block"/>
-                          &nbsp;&nbsp;Show Contributor table on Campaign single page
+                          <input type="checkbox" className="check-block col-md-1"/>
+                          <div className="col-md-11" align="left">Show Contributor table on Campaign single page</div>
                         </div>
                         
                       </div>
@@ -798,10 +815,10 @@ class Compaign extends Component {
                   <div className="col">
                     <form className="row justify-content-center" onSubmit={this.handleSubmit}>
 
-                      <div className="col-md-5 form-group">
+                      <div className="col-md-6 form-group">
                         <p>Filter by <img src="assets/images/question_mark.png" /></p>
                         <div className="row justify-content-center">
-                          Banned Countries <span className="span-space"/>
+                          Banned<span className="span-space"/> 
                             <Switch onClick={this.toggleSwitch} on={this.state.switched}/>
                           <span className="span-space"/>
                           Allowed Countries
@@ -810,9 +827,7 @@ class Compaign extends Component {
                       <div className="w-100"></div>              
                       <div className="col-md-5 form-group">
                         <p>Allowed Countries <img src="assets/images/question_mark.png" /></p>
-                        <CountryDropdown
-                            value={country}
-                            onChange={(val) => this.selectCountry(val)} classes="col-md-12 Dropdown-control" />
+                        <CountrySelect multi={true} flagImagePath="./assets/Flagicons/flags/" onSelect={this.onSelect}/>
                       </div>
                       <div className="w-100"></div>
                       <div className="col-md-5 form-group">

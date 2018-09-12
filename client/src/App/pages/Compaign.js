@@ -827,7 +827,7 @@ class Compaign extends Component {
                       <div className="w-100"></div>              
                       <div className="col-md-5 form-group">
                         <p>Allowed Countries <img src="assets/images/question_mark.png" /></p>
-                        <CountrySelect multi={true} flagImagePath="./assets/Flagicons/flags/" onSelect={this.onSelect}/>
+                        <CountrySelect multi={true} flagImagePath="./assets/images/flags/" onSelect={this.onSelect}/>
                       </div>
                       <div className="w-100"></div>
                       <div className="col-md-5 form-group">

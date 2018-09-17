@@ -353,10 +353,10 @@ class Compaign extends Component {
                     </div>
                   </div>
                
-                  <div className="row col">
+                  <div className="row col-md-12">
                     <div className="col my-2">
-                      <p className="m-0 mb-1">Raised persent: 10%</p>
-                      <div className="progress">
+                      <p className="m-0 mb-1 col-12">Raised persent: 10%</p>
+                      <div className="progress col-12">
                         <span></span>
                       </div>
                     </div>

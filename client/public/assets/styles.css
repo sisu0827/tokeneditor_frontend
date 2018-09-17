@@ -1124,7 +1124,7 @@ hr {
 
 .settingeditor1-block {
     width: 100%;
-    min-width: 750px;
+    
     height: 250px;
     border: 1px dashed #454679;
     border-radius: 20px;
@@ -1138,8 +1138,10 @@ hr {
 .tempclass-block {
   min-width: 550px;
   overflow-x: auto;
-    overflow-y: hidden;
+  overflow-y: hidden;
 }
+
+
 
 .flag-select {
   position: relative;
@@ -1212,4 +1214,3 @@ hr {
     display: none; }
   .flag-select .no--focus {
     pointer-events: none; }
-    

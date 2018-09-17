@@ -787,6 +787,8 @@ hr {
 
 .compaignbtngroup-block {
     height: 35px;
+    position: relative;
+    max-width: 110px; 
     border: 1px solid #454679;
     border-radius: 30px;
     background-color: white;
@@ -805,7 +807,8 @@ hr {
 .compaignbtnright {
     font-size: 15px;
     color: #454679;
-    padding: 5px 10px;
+    text-align: center;
+    padding: 5px 5px;
 }
 
 .compaign-img {
@@ -1095,4 +1098,44 @@ hr {
 .editor-input-custom:-moz-placeholder { /* Firefox 18- */
     font-size: 16px;
     color: #BEBEBE;
+}
+
+
+.scroll {
+    width:100%;
+    max-width: 1120px;
+    height: 250px;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+}
+
+@media only screen and (max-width: 600px) {
+  .scroll {
+      width:100%;
+      max-width: 1120px;
+      height: 250px;
+      overflow-x: auto;
+      overflow-y: hidden;
+  
+  }
+}
+
+.settingeditor1-block {
+    width: 100%;
+    min-width: 750px;
+    height: 250px;
+    border: 1px dashed #454679;
+    border-radius: 20px;
+    background-color: white;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: absolute;
+    
+}
+
+.tempclass-block {
+  min-width: 550px;
+  overflow-x: auto;
+    overflow-y: hidden;
 }

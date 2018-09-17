@@ -1,12 +1,18 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import FaIcon from 'react-fa-icon';
-import Modal                from 'react-modal';
-import Select from 'react-select';
-import Dropdown from 'react-dropdown';
-import Switch from 'react-toggle-switch';
-import { CountryDropdown, RegionDropdown } from 'react-country-region-selector';
-
+import React, { Component }                   from 'react';
+import { Link }                               from 'react-router-dom';
+import FaIcon                                 from 'react-fa-icon';
+import Modal                                  from 'react-modal';
+import Select                                 from 'react-select';
+import Dropdown                               from 'react-dropdown';
+import Switch                                 from 'react-toggle-switch';
+import { CountryDropdown, RegionDropdown }    from 'react-country-region-selector';
+import ReactFlagsSelect                       from 'react-flags-select';
+ 
+//import css module
+//import                                             'react-flags-select/css/react-flags-select.css';
+ 
+//OR import sass module
+//import                                             'react-flags-select/scss/react-flags-select.scss';
 const customStyles = {
   content : {
     width                 : '70%',
@@ -442,11 +448,16 @@ class Compaign extends Component {
                         <input type="text" className="editor-input w-100" placeholder="Text" />
                       </div>
                       <div className="w-100"></div>
-                      <div className="col-md-5 form-group">
+                      <div className="col-md-6 form-group">
                         <p>Country <img src="assets/images/question_mark.png" /></p>
-                        <CountryDropdown
-                            value={country}
-                            onChange={(val) => this.selectCountry(val)} classes="col-md-12 Dropdown-control" />
+                        <ReactFlagsSelect
+                          className="menu-flags"
+                          placeholder="Select Language"
+                          showSelectedLabel={true}
+                          showOptionLabel={true}
+                          selectedSize={18}
+                          optionsSize={14} 
+                        />
                       </div>
                       <div className="w-100"></div>
                       <div className="col-md-5 form-group">
@@ -808,11 +819,18 @@ class Compaign extends Component {
                         </div>
                       </div>
                       <div className="w-100"></div>              
-                      <div className="col-md-5 form-group">
+                      <div className="col-md-5">
                         <p>Allowed Countries <img src="assets/images/question_mark.png" /></p>
-                        <CountryDropdown
-                            value={country}
-                            onChange={(val) => this.selectCountry(val)} classes="col-md-12 Dropdown-control" />
+
+                        <ReactFlagsSelect
+                          className="menu-flags"
+                          placeholder="Select Language"
+                          showSelectedLabel={true}
+                          showOptionLabel={true}
+                          selectedSize={18}
+                          optionsSize={14} 
+                        />
+
                       </div>
                       <div className="w-100"></div>
                       <div className="col-md-5 form-group">

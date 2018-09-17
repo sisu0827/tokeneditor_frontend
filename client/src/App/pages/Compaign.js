@@ -315,65 +315,66 @@ class Compaign extends Component {
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <button className="editor-btn main big" onClick={this.openModal}><i className="fa fa-plus-circle"></i>&nbsp;&nbsp; New</button>
               </div>
-              <div className="row my-4 text-center">
-                <div className="col col-md-12 justify-content-center">
-                  <div className="row justify-content-center" >
-                  <div className="row settingeditor-block">
-                    <div className="col col-md-9  my-3">
-                      <div className="row col">
-                        <p className="m-0">&nbsp;&nbsp;&nbsp;Example campaign</p>
-                        <div className="col-md-1"></div>
-                        <div className="row compaignbtngroup-block">
-                          <div className="compaignbtnleft"><i className="fas fa-eye"></i></div>
-                          <div className="compaignbtnright">View</div>
-                        </div>
-                        <div className="col-md-1"></div><Link to={'/ManageCampaign'}>
-                          <div className="row compaignbtngroup-block">
-                            <div className="compaignbtnleft"><i className="fas fa-pencil-alt"></i></div>
-                            <div className="compaignbtnright">Manage</div>
-                          </div>
-                        </Link>
-                        <div className="col-md-1"></div>
-                        <div className="row compaignbtngroup-block">
-                          <div className="compaignbtnleft"><i className="fa fa-code"></i></div>
-                          <div className="compaignbtnright">Embed</div>
-                        </div>
-                        
-                      </div>
-                      <div className="row col">
-                        <div className="col">
-                          <p className="text-muted">by Oleh</p>
-                        </div>
-                      </div>
-                      <div className="row col">
-                        <div className="col my-2">
-                          <p className="m-0 mb-1">Raised persent: 10%</p>
-                          <div className="progress">
-                            <span></span>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="row col">
-                        <div className="col">
-                          <p className="font-weight-bold m-0">60 ETH</p>
-                          <p className="text-muted">Funding goal</p>
-                        </div>
-                        <div className="col">
-                          <p className="font-weight-bold m-0">6 ETH</p>
-                          <p className="text-muted">Fund Raised</p>
-                        </div>
-                        <div className="col">
-                          <p className="font-weight-bold m-0">54</p>
-                          <p className="text-muted">Days to go</p>
-                        </div>
+              <div className="row settingeditor1-block col-md-12">
+                <div className="col col-md-9  my-3">
+                  <div className="row tempclass-block">
+                    <div className="col-3">
+                      <p className="m-0">&nbsp;&nbsp;&nbsp;Example campaign</p>
+                    </div>
+                    <div className="col-3">
+                      <div className="row compaignbtngroup-block">
+                        <div className="compaignbtnleft"><i className="fas fa-eye"></i></div>
+                        <div className="compaignbtnright">View</div>
                       </div>
                     </div>
+                    <div className="col-3">
+                      <Link to={'/ManageCampaign'}>
+                        <div className="row compaignbtngroup-block">
+                          <div className="compaignbtnleft"><i className="fas fa-pencil-alt"></i></div>
+                          <div className="compaignbtnright">Manage</div>
+                        </div>
+                      </Link>
+                    </div>
+                    <div className="col-3">
+                      <div className="row compaignbtngroup-block">
+                        <div className="compaignbtnleft"><i className="fa fa-code"></i></div>
+                        <div className="compaignbtnright">Embed</div>
+                      </div>
+                    </div>
+                  
+                  </div>
+                  <div className="row col">
+                    <div className="col">
+                      <p className="text-muted">by Oleh</p>
+                    </div>
+                  </div>
+               
+                  <div className="row col">
+                    <div className="col my-2">
+                      <p className="m-0 mb-1">Raised persent: 10%</p>
+                      <div className="progress">
+                        <span></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="row col">
+                    <div className="col">
+                      <p className="font-weight-bold m-0">60 ETH</p>
+                      <p className="text-muted">Funding goal</p>
+                    </div>
+                    <div className="col">
+                      <p className="font-weight-bold m-0">6 ETH</p>
+                      <p className="text-muted">Fund Raised</p>
+                    </div>
+                    <div className="col">
+                      <p className="font-weight-bold m-0">54</p>
+                      <p className="text-muted">Days to go</p>
+                    </div>
+                  </div>
+                </div>
 
-                    <div className="col-md-3">
-                      <div className="compaign-img"></div>
-                    </div>
-                  </div>
-                  </div>
+                <div className="col-md-3">
+                  <div className="compaign-img"></div>
                 </div>
               </div>
               <div className="row justify-content-center my-4">
@@ -827,7 +828,7 @@ class Compaign extends Component {
                       <div className="w-100"></div>              
                       <div className="col-md-5 form-group">
                         <p>Allowed Countries <img src="assets/images/question_mark.png" /></p>
-                        <CountrySelect multi={true} flagImagePath="./assets/images/flags/" onSelect={this.onSelect}/>
+                        <CountrySelect multi={true} flagImagePath="./assets/images/flags/" onSelect={this.onSelect} css-loader=""/>
                       </div>
                       <div className="w-100"></div>
                       <div className="col-md-5 form-group">

@@ -135,19 +135,18 @@ class Billingupdate extends Component {
                       </div>
                       </div>
                     </div>
-                    <div className="settingeditor-block container-fluid my-5">
-                      <div className="row container-fluid my-4">
-                        <table className="col-md-12">
+                    <div className="table-responsive editor-block">
+                      <table className="table" bordercolor="white">
+                        <thead style={{fontSize:"15px", textAlign:"center"}}>
                           <tr>
                             <th>Date</th>
                             <th>Amount</th> 
                             <th>Type</th>
                             <th>Description</th>
                           </tr>
-                          <tr>
-                            <td colspan="4"><hr className="col-md-12"/></td>
-                          </tr>
-                          
+                        </thead>
+
+                        <tbody style={{fontSize:"13px", textAlign:"center"}}>
                           <tr >
                             <td>2018-8-24 23:32</td>
                             <td>1.2 ETH</td>
@@ -196,8 +195,9 @@ class Billingupdate extends Component {
                             <td>Refill</td>
                             <td>Balance refill from ETH</td>
                           </tr>
-                        </table>
-                      </div>
+
+                        </tbody>
+                      </table>
                     </div>
 
 

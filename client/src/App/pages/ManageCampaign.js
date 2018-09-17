@@ -28,7 +28,7 @@ class Affiliate extends Component {
                 <div className="panel-campaign panel-danger">
                   <div className="container-fluid">
                     <div className="row justify-content-center">
-                      <div className="col-md-12" id="stats" style={{height:"80px"}}>
+                      <div className="col-md-12" id="stats" style={{height:"40%"}}>
                         <div className="text-center">
                           <p className="my-2" style={{textalign: "center", fontSize:"30px", color:"rgb(69, 70, 123)", fontWeight:"bold"}}>Example Campaign</p>
                         </div>

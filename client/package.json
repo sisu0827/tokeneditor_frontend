@@ -9,6 +9,7 @@
     "react-dom": "^16.4.1",
     "react-dropdown": "^1.6.2",
     "react-fa-icon": "^0.1.4",
+    "react-flags-select": "^1.1.9",
     "react-modal": "^3.5.1",
     "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.4",

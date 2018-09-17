@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import FaIcon from 'react-fa-icon';
-import Modal                from 'react-modal';
-import Select from 'react-select';
-import Dropdown from 'react-dropdown';
-import Switch from 'react-toggle-switch';
-import { CountryDropdown, RegionDropdown } from 'react-country-region-selector';
-import CountrySelect from "react-country-select";
+import React, { Component }                   from 'react';
+import { Link }                               from 'react-router-dom';
+import FaIcon                                 from 'react-fa-icon';
+import Modal                                  from 'react-modal';
+import Select                                 from 'react-select';
+import Dropdown                               from 'react-dropdown';
+import Switch                                 from 'react-toggle-switch';
+import ReactFlagsSelect                       from 'react-flags-select'; 
+import CountrySelect                          from "react-country-select";
 
 const customStyles = {
   content : {
@@ -25,6 +25,10 @@ const customStyles = {
   }
 };
 
+
+const flagStyles = {
+  padding         : '-15px'
+};
 
 const buttonStyle = {
     border        : 'none',
@@ -464,9 +468,15 @@ class Compaign extends Component {
                       <div className="w-100"></div>
                       <div className="col-md-5 form-group">
                         <p>Country <img src="assets/images/question_mark.png" /></p>
-                        <CountryDropdown
-                            value={country}
-                            onChange={(val) => this.selectCountry(val)} classes="col-md-12 Dropdown-control" />
+                        <ReactFlagsSelect
+                          multi={true}
+                          className="menu-flags"
+                          placeholder="Select Language"
+                          showSelectedLabel={true}
+                          showOptionLabel={true}
+                          selectedSize={18}
+                          optionsSize={14} 
+                        />
                       </div>
                       <div className="w-100"></div>
                       <div className="col-md-5 form-group">
@@ -805,7 +815,7 @@ class Compaign extends Component {
               <div className="container my-5">
                 <div className="container my-5">
                 </div>
-                <div className="row text-center my-5">
+                <div className="row my-5">
                   <div className="row justify-content-center col-md-12 my-4">
                       <div className="row btngroup-block text-uppercase">
                         <div className="titleleft">step 5/6</div>
@@ -816,7 +826,7 @@ class Compaign extends Component {
                   <div className="col">
                     <form className="row justify-content-center" onSubmit={this.handleSubmit}>
 
-                      <div className="col-md-6 form-group">
+                      <div className="col-md-6 text-center form-group">
                         <p>Filter by <img src="assets/images/question_mark.png" /></p>
                         <div className="row justify-content-center">
                           Banned<span className="span-space"/> 
@@ -825,13 +835,20 @@ class Compaign extends Component {
                           Allowed Countries
                         </div>
                       </div>
-                      <div className="w-100"></div>              
-                      <div className="col-md-5 form-group">
-                        <p>Allowed Countries <img src="assets/images/question_mark.png" /></p>
-                        <CountrySelect multi={true} flagImagePath="./assets/images/flags/" onSelect={this.onSelect} css-loader=""/>
-                      </div>
                       <div className="w-100"></div>
-                      <div className="col-md-5 form-group">
+
+                      <div className="col-md-5 " id="flags" style={{padding:"0px"}}>
+                        <p className="text-center">Allowed Countries <img src="assets/images/question_mark.png" /></p>
+                          <CountrySelect 
+                            style={flagStyles}
+                            multi={true} 
+                            flagImagePath="./assets/images/flags/" 
+                            onSelect={this.onSelect} css-loader=""
+                          />
+                      </div>
+                      
+                      <div className="w-100"></div>
+                      <div className="col-md-5 text-center form-group">
                         <p>Required before investing <img src="assets/images/question_mark.png" /></p>
                         <div className="row justify-content-center">
                           <input type="checkbox" className="check-block"/>

@@ -12,7 +12,7 @@
     "react-flags-select": "^1.1.9",
     "react-modal": "^3.5.1",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "^4.0.3",
+    "react-scripts": "^5.0.1",
     "react-select": "^2.0.0",
     "react-toggle-switch": "^3.0.4"
   },
